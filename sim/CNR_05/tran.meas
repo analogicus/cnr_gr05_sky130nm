@@ -1,0 +1,11 @@
+* Measure CNR_05
+.control
+
+load {cicname}.raw
+
+echo "MEAS_START"
+
+meas tran test_voltage find i(VDD) at=10n
+
+echo "MEAS_END"
+.endc
