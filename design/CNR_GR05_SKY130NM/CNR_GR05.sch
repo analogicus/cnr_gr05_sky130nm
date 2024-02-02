@@ -29,8 +29,6 @@ N 80 -330 90 -330 {
 lab=#net1}
 N 90 -330 90 -300 {
 lab=#net1}
-N 80 -450 80 -360 {
-lab=#net2}
 N 120 -480 230 -480 {
 lab=#net2}
 N 270 -450 270 -360 {
@@ -73,6 +71,10 @@ N 340 -410 340 -330 {
 lab=#net3}
 N 310 -330 340 -330 {
 lab=#net3}
+N 80 -450 80 -430 {
+lab=#net2}
+N 80 -370 80 -360 {
+lab=#net4}
 C {cborder/border_s.sym} 520 0 0 0 {
 user="aam"
 company="wulff"}
@@ -164,3 +166,4 @@ spiceprefix=X
 }
 C {devices/ipin.sym} -90 -450 0 0 {name=p3 lab=Is10u}
 C {devices/ipin.sym} 40 -330 0 0 {name=p4 lab=Vin}
+C {devices/vsource.sym} 80 -400 0 0 {name=Vtest value=0 savecurrent=false}

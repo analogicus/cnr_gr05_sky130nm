@@ -7,7 +7,7 @@ include ../../tech/make/sim.make
 TB=tran
 VIEW=Sch
 #VIEW=Lay
-CELL=CNR_05
+CELL=CNR_GR05
 LIB =CNR_GR05_SKY130NM
 OPT=
 

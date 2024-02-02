@@ -5,7 +5,7 @@
 #ifdef Lay
 .include ../../../work/lpe/CNR_05_lpe.spi
 #else
-.include ../../../work/xsch/CNR_05.spice
+.include ../../../work/xsch/CNR_GR05.spice
 #endif
 
 *-----------------------------------------------------------------
@@ -31,7 +31,7 @@ Is10u 0 Is10u dc 10u
 *-----------------------------------------------------------------
 * DUT
 *-----------------------------------------------------------------
-.include ../xdut.spi
+XDUT VDD VSS Is10u Vin CNR_GR05
 
 *----------------------------------------------------------------
 * MEASURES
@@ -45,10 +45,10 @@ Is10u 0 Is10u dc 10u
 #ifdef Debug
 .save all
 #else
-.save all
-.save ${VPORTS}
+.save i(XDUT.Vtest)
+*.save ${VPORTS}
 #endif
-
+.save all
 *----------------------------------------------------------------
 * NGSPICE control
 *----------------------------------------------------------------
