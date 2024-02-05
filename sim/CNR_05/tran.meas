@@ -5,7 +5,9 @@ load {cicname}.raw
 
 echo "MEAS_START"
 
-meas tran test_current find i(v.XDUT.Vtest) at=10n
+meas tran test_current1 find i(v.xdut.x1.vtest1) at=10n
+meas tran test_current2 find i(v.xdut.x1.vtest2) at=10n
+*meas tran current_ref find i(v.XDUT.Vtest3) at=10n
 
 echo "MEAS_END"
 .endc
