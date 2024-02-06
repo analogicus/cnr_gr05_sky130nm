@@ -8,3 +8,31 @@
 #  scale: <scale, multiply result by scale>
 #  digits: <significant digits>
 #  unit: Unit
+
+i_min:
+  src: i_min
+  typ: 1
+  name: Min bias current
+  min: 0.8
+  max: 1.1
+  scale: 1e6
+  digits: 3
+  unit: uA
+i_max:
+  src: i_max
+  typ: 1
+  name: Max bias current
+  min: 0.9
+  max: 1.2
+  scale: 1e6
+  digits: 3
+  unit: uA
+i_25:
+  src: i_25
+  typ: 1
+  name: Typical bias current
+  min: 0.9
+  max: 1.1
+  scale: 1e6
+  digits: 3
+  unit: uA

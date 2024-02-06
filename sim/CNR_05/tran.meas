@@ -1,21 +1,17 @@
 * Measure CNR_05
 .control
 
-load {cicname}.raw
-
 echo "MEAS_START"
 
-foreach vtemp -40 -20 0 20 40 80 125
-load {cicname}_$vtemp
-meas tran i_$vtemp avg i(v.xdut.vtest3) from=2u to=20u
-end
+load {cicname}.raw
 
+let v-sweep=v(temp)
 
-*meas tran tail_current find i(v.xdut.x1.vtest1) at=10n
-*meas tran bias_current find i(v.xdut.x1.vtest2) at=10n
-*meas tran output_current find i(v.xdut.vtest3) at=10n
+*meas DC i_min MIN i(v.xdut.x1.vtest3)
+*meas DC i_max MAX i(v.xdut.x1.vtest3)
+meas DC i_25 AVG i(v.xdut.x1.vtest3)
 
-
+plot v-sweep
 
 echo "MEAS_END"
 .endc
