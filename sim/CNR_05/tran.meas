@@ -9,7 +9,7 @@ let v-sweep=v(temp)
 
 *meas DC i_min MIN i(v.xdut.x1.vtest3)
 *meas DC i_max MAX i(v.xdut.x1.vtest3)
-meas DC i_25 AVG i(v.xdut.x1.vtest3)
+*meas DC i_25 AVG i(v.xdut.x1.vtest3)
 
 plot v-sweep
 

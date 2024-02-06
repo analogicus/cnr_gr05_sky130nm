@@ -21,8 +21,6 @@ N -250 -440 -250 -410 {
 lab=#net1}
 N -220 -590 -110 -590 {
 lab=#net2}
-N -70 -560 -70 -470 {
-lab=VO}
 N -270 -620 -70 -620 {
 lab=VDD_1V8}
 N -70 -590 -60 -590 {
@@ -83,19 +81,15 @@ N -160 -180 -150 -180 {
 lab=VSS}
 N -430 -620 -430 -500 {
 lab=VDD_1V8}
-N -70 -510 -30 -510 {
+N -70 -560 -70 -470 {
 lab=VO}
-N 70 -490 70 -470 {}
-N -50 -490 70 -490 {}
-N -50 -510 -50 -490 {}
-N 70 -410 70 -180 {}
-N -150 -180 70 -180 {}
-N -40 -490 -40 -440 {}
+N -70 -540 -30 -540 {
+lab=VO}
 C {devices/ipin.sym} -570 -620 0 0 {name=p1 lab=VDD_1V8}
 C {devices/ipin.sym} -510 -180 0 0 {name=p2 lab=VSS}
 C {devices/ipin.sym} -300 -440 0 0 {name=p4 lab=VP}
 C {devices/ipin.sym} -30 -440 0 1 {name=p3 lab=VN}
-C {devices/opin.sym} -30 -510 0 0 {name=p5 lab=VO}
+C {devices/opin.sym} -30 -540 0 0 {name=p5 lab=VO}
 C {devices/vsource.sym} -160 -350 0 0 {name=Vtest1 value=0 savecurrent=false}
 C {CNR_ATR_SKY130NM/CNRATR_NCH_4C1F2.sym} -300 -440 0 0 {name=x7 }
 C {CNR_ATR_SKY130NM/CNRATR_NCH_4C1F2.sym} -30 -440 0 1 {name=x1 }
@@ -105,4 +99,3 @@ C {CNR_ATR_SKY130NM/CNRATR_NCH_8C1F2.sym} -390 -230 0 1 {name=x5 }
 C {devices/vsource.sym} -430 -350 0 0 {name=Vtest2 value=0 savecurrent=false}
 C {devices/isource.sym} -430 -470 0 0 {name=I0 value=60u}
 C {CNR_ATR_SKY130NM/CNRATR_NCH_8C1F2.sym} -200 -230 0 0 {name=x4 }
-C {devices/vsource.sym} 70 -440 0 0 {name=Vtest3 value=0 savecurrent=false}
