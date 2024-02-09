@@ -32,6 +32,7 @@ VDD_1V8  VDD_1V8  0 dc 1.8
 *-----------------------------------------------------------------
 XDUT VP VN VSS VDD_1V8 CNR_GR05
 
+B5 temp 0 v=temper
 
 *----------------------------------------------------------------
 * MEASURES
@@ -57,34 +58,10 @@ set color0=white
 set color1=black
 unset askquit
 
-optran 1 1 1 10n 1u 0
+optran 1 1 1 10n 20u 0
 
-
-#ifdef Nosweep
-
-
-foreach vtemp -40 125
-  option temp=$vtemp
-  tran 1n 8u 1n
-  write {cicname}_$vtemp
-end
-
-#else
-
-foreach vtemp -40 -20 0 20 40 80 125
-  option temp=$vtemp
-*- 32*200n = 8.4 us =>
-*- 64*200n = 16.8us => +5us =22us
-*-  tran 1n 22u 1n
-*- 128*200n = 25.6us => +5u = 31us
-  tran 1n 31u 1n
-*- 256*200n = 55.2us => +5us = 61us
-*  tran 1n 61u 1n
-  write {cicname}_$vtemp
-end
-
-#endif
-
+dc TEMP -40 125 10
+write
 quit
 
 .endc
