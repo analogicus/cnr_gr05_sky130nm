@@ -1,0 +1,86 @@
+** sch_path: /home/trondfc/aicex/ip/cnr_gr05_sky130nm/design/CNR_GR05_SKY130NM/CNR_GR05.sch
+**.subckt CNR_GR05 VP VN VSS VDD_1V8
+*.ipin VP
+*.ipin VN
+*.ipin VSS
+*.ipin VDD_1V8
+x1 VDD_1V8 net1 VP VN VSS temp2cur
+XQ1 VSS VSS net3 sky130_fd_pr__pnp_05v5_W3p40L3p40 m=8
+XQ2 VSS VSS VN sky130_fd_pr__pnp_05v5_W3p40L3p40 m=1
+x6 VN net1 VDD_1V8 net4 CNRATR_PCH_4C1F2
+x8 VP net1 VDD_1V8 net5 CNRATR_PCH_4C1F2
+R1 net3 net2 sky130_fd_pr__res_generic_po W=1 L=100 m=1
+Vtest3 VP net2 0
+**** begin user architecture code
+
+
+* ngspice commands
+.include corner.spi
+
+
+**** end user architecture code
+**.ends
+
+* expanding   symbol:  CNR_GR05_SKY130NM/temp2cur.sym # of pins=5
+** sym_path: /home/trondfc/aicex/ip/cnr_gr05_sky130nm/design/CNR_GR05_SKY130NM/temp2cur.sym
+** sch_path: /home/trondfc/aicex/ip/cnr_gr05_sky130nm/design/CNR_GR05_SKY130NM/temp2cur.sch
+.subckt temp2cur VDD_1V8 VO VP VN VSS
+*.ipin VDD_1V8
+*.ipin VSS
+*.ipin VP
+*.ipin VN
+*.opin VO
+Vtest1 net1 net5 0
+x7 net2 VP net1 net1 CNRATR_NCH_4C1F2
+x1 VO VN net1 net1 CNRATR_NCH_4C1F2
+x2 VO net2 VDD_1V8 VDD_1V8 CNRATR_PCH_4C1F2
+x3 net2 net2 VDD_1V8 VDD_1V8 CNRATR_PCH_4C1F2
+x5 net3 net3 VSS VSS CNRATR_NCH_8C1F2
+Vtest2 net4 net3 0
+I0 VDD_1V8 net4 60u
+x4 net5 net3 VSS VSS CNRATR_NCH_8C1F2
+.ends
+
+
+* expanding   symbol:  CNR_ATR_SKY130NM/CNRATR_PCH_4C1F2.sym # of pins=4
+** sym_path: /home/trondfc/aicex/ip/cnr_gr05_sky130nm/design/CNR_ATR_SKY130NM/CNRATR_PCH_4C1F2.sym
+** sch_path: /home/trondfc/aicex/ip/cnr_gr05_sky130nm/design/CNR_ATR_SKY130NM/CNRATR_PCH_4C1F2.sch
+.subckt CNRATR_PCH_4C1F2 D G S B
+*.iopin D
+*.iopin G
+*.iopin S
+*.iopin B
+XM1 D G S B sky130_fd_pr__pfet_01v8 L=0.252 W=3.84 nf=2 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1 m=1
+.ends
+
+
+* expanding   symbol:  CNR_ATR_SKY130NM/CNRATR_NCH_4C1F2.sym # of pins=4
+** sym_path: /home/trondfc/aicex/ip/cnr_gr05_sky130nm/design/CNR_ATR_SKY130NM/CNRATR_NCH_4C1F2.sym
+** sch_path: /home/trondfc/aicex/ip/cnr_gr05_sky130nm/design/CNR_ATR_SKY130NM/CNRATR_NCH_4C1F2.sch
+.subckt CNRATR_NCH_4C1F2 D G S B
+*.iopin D
+*.iopin G
+*.iopin S
+*.iopin B
+XM1 D G S B sky130_fd_pr__nfet_01v8 L=0.252 W=3.84 nf=2 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1 m=1
+.ends
+
+
+* expanding   symbol:  CNR_ATR_SKY130NM/CNRATR_NCH_8C1F2.sym # of pins=4
+** sym_path: /home/trondfc/aicex/ip/cnr_gr05_sky130nm/design/CNR_ATR_SKY130NM/CNRATR_NCH_8C1F2.sym
+** sch_path: /home/trondfc/aicex/ip/cnr_gr05_sky130nm/design/CNR_ATR_SKY130NM/CNRATR_NCH_8C1F2.sch
+.subckt CNRATR_NCH_8C1F2 D G S B
+*.iopin D
+*.iopin G
+*.iopin S
+*.iopin B
+XM1 D G S B sky130_fd_pr__nfet_01v8 L=0.252 W=7.68 nf=2 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1 m=1
+.ends
+
+.end
