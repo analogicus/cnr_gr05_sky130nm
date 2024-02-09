@@ -25,7 +25,7 @@
 *-----------------------------------------------------------------
 VSS  VSS  0 dc 0
 VDD_1V8  VDD_1V8  0 dc 1.8
-VP VP 0 dc 1.2
+*VP VP 0 dc 1.2
 
 *-----------------------------------------------------------------
 * DUT
@@ -60,7 +60,7 @@ set color0=white
 set color1=black
 unset askquit
 
-optran 0 0 0 100n 20u 0
+optran 1 1 1 10n 20u 0
 
 dc TEMP -40 125 10
 write
