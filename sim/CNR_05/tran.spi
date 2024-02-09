@@ -57,7 +57,7 @@ set color0=white
 set color1=black
 unset askquit
 
-optran 0 0 0 10n 1u 0
+optran 1 1 1 10n 1u 0
 
 
 #ifdef Nosweep

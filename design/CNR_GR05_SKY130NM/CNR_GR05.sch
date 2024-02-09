@@ -13,8 +13,6 @@ F                 Full view
 
 Manual: https://xschem.sourceforge.io/stefan/xschem_man/xschem_man.pdf
 } 1030 -870 0 0 0.6 0.6 {}
-N 170 -540 230 -540 {
-lab=#net1}
 N 590 -110 590 -90 {
 lab=VSS}
 N 440 -110 440 -90 {
@@ -51,8 +49,6 @@ N -130 -90 590 -90 {
 lab=VSS}
 N -130 -480 -130 -90 {
 lab=VSS}
-N 510 -540 510 -420 {
-lab=#net1}
 N -190 -520 -190 -380 {
 lab=VP}
 N -190 -380 590 -380 {
@@ -61,8 +57,6 @@ N -210 -500 -210 -350 {
 lab=VN}
 N -210 -350 440 -350 {
 lab=VN}
-N 230 -540 510 -540 {
-lab=#net1}
 N 590 -390 590 -350 {
 lab=VP}
 N 410 -420 440 -420 {
@@ -89,10 +83,15 @@ N 520 -230 570 -230 {
 lab=VSS}
 N 520 -230 520 -90 {
 lab=VSS}
+N 170 -490 510 -490 {
+lab=#net1}
+N 170 -540 170 -490 {
+lab=#net1}
+N 510 -490 510 -420 {
+lab=#net1}
 C {cborder/border_s.sym} 520 0 0 0 {
 user="aam"
 company="wulff"}
-C {CNR_GR05_SKY130NM/temp2cur.sym} 20 -510 0 0 {name=x1}
 C {devices/ipin.sym} -240 -520 0 0 {name=p4 lab=VP}
 C {devices/ipin.sym} -240 -500 0 0 {name=p3 lab=VN}
 C {devices/ipin.sym} -130 -480 0 0 {name=p2 lab=VSS}
@@ -112,3 +111,4 @@ C {CNR_ATR_SKY130NM/CNRATR_PCH_4C1F2.sym} 550 -420 0 0 {name=x8 }
 C {devices/vsource.sym} 590 -320 0 0 {name=Vtest3 value=0 savecurrent=false}
 C {SUN_TR_SKY130NM/SUNTR_RPPO2.sym} 590 -270 1 0 {name=x2 }
 C {SUN_TR_SKY130NM/SUNTR_RPPO2.sym} 660 -270 1 0 {name=x3 }
+C {CNR_GR05_SKY130NM/OTA.sym} 20 -510 0 0 {name=x1}

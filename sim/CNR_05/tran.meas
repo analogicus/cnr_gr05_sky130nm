@@ -7,7 +7,7 @@ echo "MEAS_START"
 
 foreach vtemp -40 -20 0 20 40 80 125
 load {cicname}_$vtemp
-*echo something
+echo something
 meas tran i_$vtemp avg i(v.xdut.vtest3) from=2u to=20u
 end
 
