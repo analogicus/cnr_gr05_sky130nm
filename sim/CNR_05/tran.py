@@ -48,7 +48,7 @@ def main(name):
   axs[0].set_ylabel('Iout (uA)')
   axs[0].grid(True)
 
-  axs[0].plot(temp, iout, label='Iout_messured', color='blue')
+  axs[0].plot(temp, iout, label='Iout_measured', color='blue')
   axs[0].plot(temp, iout_ideal, label='Iout_ideal', color='orange')
   axs[0].legend()
 
@@ -58,8 +58,9 @@ def main(name):
 
   axs[1].plot(temp, iout_error, label='Iout_error', color='red')
   axs[1].legend()
+  fig.tight_layout(pad=1.0)
 
-  plt.savefig(name + "_I_out.png", dpi=300)
+  plt.savefig(name + "_I_out.svg", dpi=300)
 
   fig2, axs2 = plt.subplots(1)
   fig2.suptitle("Current Consumption")
@@ -72,7 +73,7 @@ def main(name):
   axs2.legend()
 
 
-  plt.savefig(name + "_Current.png", dpi=300)
+  plt.savefig(name + "_Current.svg", dpi=300)
   #plt.show()
 
   fig3, axs3 = plt.subplots(1)
@@ -86,6 +87,6 @@ def main(name):
   axs3.plot(temp, t2, label='I(T2)', color='orange')
   axs3.legend()
 
-  plt.savefig(name + "_OTA.png", dpi=300)
+  plt.savefig(name + "_OTA.svg", dpi=300)
 
   df.to_csv(name + ".csv", index=False)
