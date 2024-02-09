@@ -7,13 +7,15 @@ echo "MEAS_START"
 
 foreach vtemp -40 -20 0 20 40 80 125
 load {cicname}_$vtemp
+*echo something
 meas tran i_$vtemp avg i(v.xdut.vtest3) from=2u to=20u
 end
 
 
 *meas tran tail_current find i(v.xdut.x1.vtest1) at=10n
 *meas tran bias_current find i(v.xdut.x1.vtest2) at=10n
-*meas tran output_current find i(v.xdut.vtest3) at=10n
+*meas tran Vs find  v(m.xdut.x1.x4.xm1.msky130_fd_pr__nfet_01v8#dbody) at=10n
+*meas tran output_current find (v.xdut.vtest3) at=10n
 
 
 

@@ -25,8 +25,6 @@ N 550 -140 550 -90 {
 lab=VSS}
 N 440 -260 440 -170 {
 lab=VN}
-N 590 -260 590 -230 {
-lab=#net2}
 N 440 -310 440 -260 {
 lab=VN}
 N 480 -420 550 -420 {
@@ -37,8 +35,6 @@ N 440 -530 440 -450 {
 lab=VDD_1V8}
 N 440 -390 440 -310 {
 lab=VN}
-N 590 -390 590 -310 {
-lab=VP}
 N -130 -580 -130 -540 {
 lab=VDD_1V8}
 N -130 -580 590 -580 {
@@ -67,6 +63,32 @@ N -210 -350 440 -350 {
 lab=VN}
 N 230 -540 510 -540 {
 lab=#net1}
+N 590 -390 590 -350 {
+lab=VP}
+N 410 -420 440 -420 {
+lab=VDD_1V8}
+N 410 -580 410 -420 {
+lab=VDD_1V8}
+N 590 -420 620 -420 {
+lab=VDD_1V8}
+N 620 -580 620 -420 {
+lab=VDD_1V8}
+N 590 -580 620 -580 {
+lab=VDD_1V8}
+N 590 -290 590 -270 {
+lab=#net2}
+N 590 -190 590 -170 {
+lab=#net3}
+N 590 -270 660 -270 {
+lab=#net2}
+N 590 -190 660 -190 {
+lab=#net3}
+N 570 -230 640 -230 {
+lab=VSS}
+N 520 -230 570 -230 {
+lab=VSS}
+N 520 -230 520 -90 {
+lab=VSS}
 C {cborder/border_s.sym} 520 0 0 0 {
 user="aam"
 company="wulff"}
@@ -87,9 +109,6 @@ spiceprefix=X
 }
 C {CNR_ATR_SKY130NM/CNRATR_PCH_4C1F2.sym} 480 -420 0 1 {name=x6 }
 C {CNR_ATR_SKY130NM/CNRATR_PCH_4C1F2.sym} 550 -420 0 0 {name=x8 }
-C {sky130_fd_pr/res_generic_po.sym} 590 -200 0 0 {name=R1
-W=1
-L=100
-model=res_generic_po
-mult=1}
-C {devices/vsource.sym} 590 -290 0 0 {name=Vtest3 value=0 savecurrent=false}
+C {devices/vsource.sym} 590 -320 0 0 {name=Vtest3 value=0 savecurrent=false}
+C {SUN_TR_SKY130NM/SUNTR_RPPO2.sym} 590 -270 1 0 {name=x2 }
+C {SUN_TR_SKY130NM/SUNTR_RPPO2.sym} 660 -270 1 0 {name=x3 }

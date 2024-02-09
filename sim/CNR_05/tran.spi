@@ -25,7 +25,7 @@
 *-----------------------------------------------------------------
 VSS  VSS  0 dc 0
 VDD_1V8  VDD_1V8  0 dc 1.8
-VP VP 0 dc 1.2
+*VP VP 0 dc 1.2
 
 *-----------------------------------------------------------------
 * DUT
@@ -57,7 +57,7 @@ set color0=white
 set color1=black
 unset askquit
 
-optran 0 0 0 100p 2n 0
+optran 0 0 0 10n 1u 0
 
 
 #ifdef Nosweep
