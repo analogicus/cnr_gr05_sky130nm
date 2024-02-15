@@ -1,8 +1,6 @@
 * Measure CNR_05
 .control
 
-load {cicname}.raw
-
 echo "MEAS_START"
 
 load {cicname}.raw

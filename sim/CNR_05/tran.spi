@@ -30,7 +30,7 @@ VDD_1V8  VDD_1V8  0 dc 1.8
 *-----------------------------------------------------------------
 * DUT
 *-----------------------------------------------------------------
-XDUT VP VN VSS VDD_1V8 CNR_GR05
+XDUT VSS VDD_1V8 CNR_GR05
 
 B5 temp 0 v=temper
 
@@ -60,8 +60,10 @@ unset askquit
 
 optran 1 1 1 10n 20u 0
 
-dc TEMP -40 125 10
+
+dc TEMP -40 125 1
 write
+
 quit
 
 .endc
