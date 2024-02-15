@@ -33,7 +33,7 @@ etc: netlist
 	cicsim run --name ${VIEW}_etc ${TB} ${OPT} ${VIEW} Gt "Kss,Kff,Ksf,Kfs" "Th,Tl" "Vl,Vh"
 
 mc: netlist
-	cicsim run --name ${VIEW}_mc --count 100 ${TB} ${OPT} ${VIEW} Gt "Kttmm" "Tt" "Vt"
+	cicsim run --name ${VIEW}_mc --count 30 ${TB} ${OPT} ${VIEW} Gt "Kttmm" "Tt" "Vt"
 
 ntc: netlist
 	cicsim run --name ${VIEW}_ntc ${TB} ${OPT} ${VIEW} Gt "Ktt,Kss,Kff" "Tt" Vt
@@ -42,13 +42,16 @@ temp: netlist
 	cicsim run --name ${VIEW}_temp ${TB} ${OPT} ${VIEW} Gt "Ktt" "Tt,Th,Tl" Vt
 
 combine:
-	python3 combine_plots.py
+	python3 plot.py show_plots multi_plots .svg
 
 summary:
 	cicsim summary --output "README.md"
 
 slide:
 	pandoc -s  -t slidy README.md -o README.html
+
+plot:
+	python3 plot.py show_plots .svg
 
 
 clean:
