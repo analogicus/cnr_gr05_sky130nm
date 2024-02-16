@@ -22,8 +22,7 @@ N 280 -570 280 -490 {
 lab=VSS}
 N -100 -490 280 -490 {
 lab=VSS}
-N -100 -550 -100 -490 {
-lab=VSS}
+N -100 -570 -100 -490 {}
 C {cborder/border_s.sym} 520 0 0 0 {
 user="aam"
 company="wulff"}
