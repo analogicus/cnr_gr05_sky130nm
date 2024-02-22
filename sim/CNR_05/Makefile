@@ -41,6 +41,9 @@ ntc: netlist
 temp: netlist
 	cicsim run --name ${VIEW}_temp ${TB} ${OPT} ${VIEW} Gt "Ktt" "Tt,Th,Tl" Vt
 
+dut:
+	perl ../../tech/script/genxdut ../../work/xsch/${CELL}.spice ${CELL}
+
 combine:
 	python3 plot.py show_plots multi_plots .svg
 
@@ -56,6 +59,7 @@ plot:
 
 clean:
 	-rm -rf output_*
+	-rm -rf plots
 	-rm -rf __pycache__
 	-rm *.run
 	-rm *.pdf
