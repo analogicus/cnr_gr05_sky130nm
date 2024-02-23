@@ -13,102 +13,142 @@ F                 Full view
 
 Manual: https://xschem.sourceforge.io/stefan/xschem_man/xschem_man.pdf
 } 1030 -870 0 0 0.6 0.6 {}
-N 590 -110 590 -90 {
+N 410 -110 410 -90 {
 lab=VSS}
-N 440 -110 440 -90 {
+N 260 -110 260 -90 {
 lab=VSS}
-N 480 -140 480 -90 {
+N 300 -140 300 -90 {
 lab=VSS}
-N 550 -140 550 -90 {
+N 370 -140 370 -90 {
 lab=VSS}
-N 440 -260 440 -170 {
+N 260 -260 260 -170 {
 lab=VN}
-N 440 -310 440 -260 {
+N 260 -310 260 -260 {
 lab=VN}
-N 480 -420 550 -420 {
+N 300 -420 370 -420 {
 lab=#net1}
-N 590 -530 590 -450 {
+N 410 -530 410 -450 {
 lab=VDD_1V8}
-N 440 -530 440 -450 {
+N 260 -530 260 -450 {
 lab=VDD_1V8}
-N 440 -390 440 -310 {
+N 260 -390 260 -310 {
 lab=VN}
-N -130 -580 -130 -540 {
+N -310 -580 -310 -540 {
 lab=VDD_1V8}
-N -130 -580 590 -580 {
+N -310 -580 410 -580 {
 lab=VDD_1V8}
-N 590 -580 590 -530 {
+N 410 -580 410 -530 {
 lab=VDD_1V8}
-N 440 -580 440 -530 {
+N 260 -580 260 -530 {
 lab=VDD_1V8}
-N -240 -520 -130 -520 {
+N -420 -520 -310 -520 {
 lab=VP}
-N -240 -500 -130 -500 {
+N -420 -500 -310 -500 {
 lab=VN}
-N -130 -90 590 -90 {
+N -310 -90 410 -90 {
 lab=VSS}
-N -130 -480 -130 -90 {
+N -310 -480 -310 -90 {
 lab=VSS}
-N -190 -520 -190 -380 {
+N -370 -520 -370 -380 {
 lab=VP}
-N -190 -380 590 -380 {
+N -370 -380 410 -380 {
 lab=VP}
-N -210 -500 -210 -350 {
+N -390 -500 -390 -350 {
 lab=VN}
-N -210 -350 440 -350 {
+N -390 -350 260 -350 {
 lab=VN}
-N 590 -390 590 -350 {
+N 410 -390 410 -350 {
 lab=VP}
+N 230 -420 260 -420 {
+lab=VDD_1V8}
+N 230 -580 230 -420 {
+lab=VDD_1V8}
 N 410 -420 440 -420 {
 lab=VDD_1V8}
-N 410 -580 410 -420 {
+N 440 -580 440 -420 {
 lab=VDD_1V8}
-N 590 -420 620 -420 {
+N 410 -580 440 -580 {
 lab=VDD_1V8}
-N 620 -580 620 -420 {
-lab=VDD_1V8}
-N 590 -580 620 -580 {
-lab=VDD_1V8}
-N 590 -290 590 -270 {
+N 410 -290 410 -270 {
 lab=#net2}
-N 590 -190 590 -170 {
+N 410 -190 410 -170 {
 lab=#net3}
-N 590 -270 660 -270 {
+N 410 -270 480 -270 {
 lab=#net2}
-N 590 -190 660 -190 {
+N 410 -190 480 -190 {
 lab=#net3}
-N 570 -230 640 -230 {
+N 390 -230 460 -230 {
 lab=VSS}
-N 520 -230 570 -230 {
+N 340 -230 390 -230 {
 lab=VSS}
-N 520 -230 520 -90 {
+N 340 -230 340 -90 {
 lab=VSS}
-N 170 -490 510 -490 {
+N -10 -490 330 -490 {
 lab=#net1}
-N 170 -540 170 -490 {
+N -10 -540 -10 -490 {
 lab=#net1}
-N 510 -490 510 -420 {
+N 330 -490 330 -420 {
 lab=#net1}
+N 330 -490 570 -490 {
+lab=#net1}
+N 570 -490 570 -420 {
+lab=#net1}
+N 440 -580 610 -580 {
+lab=VDD_1V8}
+N 610 -580 610 -450 {
+lab=VDD_1V8}
+N 610 -420 640 -420 {
+lab=VDD_1V8}
+N 640 -580 640 -420 {
+lab=VDD_1V8}
+N 610 -580 640 -580 {
+lab=VDD_1V8}
+N 410 -90 610 -90 {
+lab=VSS}
+N 610 -390 610 -280 {
+lab=Vout}
+N 610 -310 740 -310 {
+lab=Vout}
+N 740 -310 740 -280 {
+lab=Vout}
+N 740 -220 740 -90 {
+lab=VSS}
+N 610 -90 740 -90 {
+lab=VSS}
+N 710 -250 740 -250 {
+lab=VSS}
+N 710 -250 710 -90 {
+lab=VSS}
+N 780 -250 810 -250 {
+lab=reset}
+N 610 -220 610 -90 {
+lab=VSS}
 C {cborder/border_s.sym} 520 0 0 0 {
 user="aam"
 company="wulff"}
-C {devices/ipin.sym} -240 -520 0 0 {name=p4 lab=VP}
-C {devices/ipin.sym} -240 -500 0 0 {name=p3 lab=VN}
-C {devices/ipin.sym} -130 -480 0 0 {name=p2 lab=VSS}
-C {devices/ipin.sym} -130 -540 0 0 {name=p1 lab=VDD_1V8}
-C {sky130_fd_pr/pnp_05v5.sym} 570 -140 0 0 {name=Q1
+C {devices/ipin.sym} -420 -520 0 0 {name=p4 lab=VP}
+C {devices/ipin.sym} -420 -500 0 0 {name=p3 lab=VN}
+C {devices/ipin.sym} -310 -480 0 0 {name=p2 lab=VSS}
+C {devices/ipin.sym} -310 -540 0 0 {name=p1 lab=VDD_1V8}
+C {sky130_fd_pr/pnp_05v5.sym} 390 -140 0 0 {name=Q1
 model=pnp_05v5_W3p40L3p40
 m=8
 spiceprefix=X
 }
-C {sky130_fd_pr/pnp_05v5.sym} 460 -140 0 1 {name=Q2
+C {sky130_fd_pr/pnp_05v5.sym} 280 -140 0 1 {name=Q2
 model=pnp_05v5_W3p40L3p40
 m=1
 spiceprefix=X
 }
-C {CNR_ATR_SKY130NM/CNRATR_PCH_4C1F2.sym} 480 -420 0 1 {name=x6 }
-C {CNR_ATR_SKY130NM/CNRATR_PCH_4C1F2.sym} 550 -420 0 0 {name=x8 }
-C {devices/vsource.sym} 590 -320 0 0 {name=Vtest3 value=0 savecurrent=false}
-C {SUN_TR_SKY130NM/SUNTR_RPPO2.sym} 590 -270 1 0 {name=x2 }
-C {SUN_TR_SKY130NM/SUNTR_RPPO2.sym} 660 -270 1 0 {name=x3 }
-C {CNR_GR05_SKY130NM/OTA.sym} 20 -510 0 0 {name=x1}
+C {CNR_ATR_SKY130NM/CNRATR_PCH_4C1F2.sym} 300 -420 0 1 {name=x6 }
+C {CNR_ATR_SKY130NM/CNRATR_PCH_4C1F2.sym} 370 -420 0 0 {name=x8 }
+C {devices/vsource.sym} 410 -320 0 0 {name=Vtest3 value=0 savecurrent=false}
+C {SUN_TR_SKY130NM/SUNTR_RPPO2.sym} 410 -270 1 0 {name=x2 }
+C {SUN_TR_SKY130NM/SUNTR_RPPO2.sym} 480 -270 1 0 {name=x3 }
+C {CNR_GR05_SKY130NM/OTA.sym} -160 -510 0 0 {name=x1}
+C {CNR_ATR_SKY130NM/CNRATR_PCH_4C1F2.sym} 570 -420 0 0 {name=x4 }
+C {sky130_fd_pr/cap_mim_m3_2.sym} 610 -250 0 0 {name=C3 model=cap_mim_m3_2 W=10 L=10 MF=2 spiceprefix=X}
+C {CNR_ATR_SKY130NM/CNRATR_NCH_4C1F2.sym} 780 -250 0 1 {name=x7 }
+C {sky130_fd_pr/cap_mim_m3_2.sym} 610 -250 0 0 {name=C1 model=cap_mim_m3_2 W=10 L=10 MF=2 spiceprefix=X}
+C {devices/lab_pin.sym} 610 -350 0 1 {name=p5 sig_type=std_logic lab=Vout}
+C {devices/ipin.sym} 810 -250 0 1 {name=p6 lab=Vreset}

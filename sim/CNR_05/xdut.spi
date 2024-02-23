@@ -1,2 +1,2 @@
 *Automatic generated instance fron ../../tech/scripts/genxdut CNR_GR05
-XDUT  VP VN VSS VDD_1V8  CNR_GR05
+XDUT  VP VN VSS VDD_1V8 Vreset  CNR_GR05

@@ -4,7 +4,7 @@ all: typical etc mc summary
 
 include ../../tech/make/sim.make
 
-TB=tran
+TB=time
 VIEW=Sch
 #VIEW=Lay
 CELL=CNR_GR05
@@ -40,6 +40,9 @@ ntc: netlist
 
 temp: netlist
 	cicsim run --name ${VIEW}_temp ${TB} ${OPT} ${VIEW} Gt "Ktt" "Tt,Th,Tl" Vt
+
+dut: 
+	perl ../../tech/script/genxdut ../../work/xsch/${CELL}.spice ${CELL}
 
 combine:
 	python3 combine_plots.py
