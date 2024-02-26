@@ -25,7 +25,8 @@
 *-----------------------------------------------------------------
 VSS  VSS  0 dc 0
 VDD_1V8  VDD_1V8  0 dc 1.8 
-Vreset Vreset 0 PULSE(0 1.8 5n 1n 1n 10n 300n)
+Vthreshold  Vthreshold  0 dc 0.9 
+Vreset Vreset 0 PULSE(0 1.8 100n 1n 1n 10n 300n)
 
 *-----------------------------------------------------------------
 * DUT
