@@ -12,7 +12,7 @@ R                 Rotate
 F                 Full view
 
 Manual: https://xschem.sourceforge.io/stefan/xschem_man/xschem_man.pdf
-} 1030 -870 0 0 0.6 0.6 {}
+} 1160 -880 0 0 0.6 0.6 {}
 N 410 -110 410 -90 {
 lab=VSS}
 N 260 -110 260 -90 {
@@ -120,9 +120,39 @@ lab=VSS}
 N 710 -250 710 -90 {
 lab=VSS}
 N 780 -250 810 -250 {
-lab=reset}
+lab=Vreset}
 N 610 -220 610 -90 {
 lab=VSS}
+N 560 -720 560 -630 {
+lab=Vout}
+N 560 -630 740 -630 {
+lab=Vout}
+N 740 -630 740 -340 {
+lab=Vout}
+N 610 -340 740 -340 {
+lab=Vout}
+N 510 -780 620 -780 {
+lab=VDD_1V8}
+N 510 -780 510 -580 {
+lab=VDD_1V8}
+N 630 -780 630 -770 {
+lab=VDD_1V8}
+N 620 -780 630 -780 {
+lab=VDD_1V8}
+N 630 -710 630 -680 {
+lab=VSS}
+N 560 -750 560 -720 {
+lab=Vout}
+N 560 -750 630 -750 {
+lab=Vout}
+N 590 -730 630 -730 {
+lab=Vthreshold}
+N 340 -730 590 -730 {
+lab=Vthreshold}
+N 630 -680 920 -680 {}
+N 920 -680 920 -100 {}
+N 920 -100 920 -90 {}
+N 740 -90 920 -90 {}
 C {cborder/border_s.sym} 520 0 0 0 {
 user="aam"
 company="wulff"}
@@ -152,3 +182,6 @@ C {CNR_ATR_SKY130NM/CNRATR_NCH_4C1F2.sym} 780 -250 0 1 {name=x7 }
 C {sky130_fd_pr/cap_mim_m3_2.sym} 610 -250 0 0 {name=C1 model=cap_mim_m3_2 W=10 L=10 MF=2 spiceprefix=X}
 C {devices/lab_pin.sym} 610 -350 0 1 {name=p5 sig_type=std_logic lab=Vout}
 C {devices/ipin.sym} 810 -250 0 1 {name=p6 lab=Vreset}
+C {CNR_GR05_SKY130NM/OTA.sym} 780 -740 0 0 {name=x5}
+C {devices/ipin.sym} 340 -730 0 0 {name=p7 lab=Vthreshold}
+C {devices/lab_pin.sym} 930 -770 0 1 {name=p8 sig_type=std_logic lab=Vcomp}
