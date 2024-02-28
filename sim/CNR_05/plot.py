@@ -110,6 +110,8 @@ def choose_file(dir):
             break
         elif(file_num == "done"):
             break
+        elif(file_num == "d"):
+            break
         try:
             file_num = int(file_num)
             files_to_plot.append(files[file_num])
@@ -143,6 +145,8 @@ def choose_variable(df):
             if len(column_num) == 1:
                 column_num = column_num[0]
                 if column_num == "done":
+                    break
+                elif column_num == "d":
                     break
                 else:
                     columns_to_print.append(columns[int(column_num)])

@@ -43,6 +43,8 @@ N -70 -540 -30 -540 {
 lab=VO}
 N -260 -440 -70 -440 {
 lab=#net3}
+N -140 -10 -60 -10 {
+lab=VSS}
 N -620 -10 -140 -10 {
 lab=VSS}
 N -460 -620 -460 -200 {
@@ -51,7 +53,6 @@ N -460 -180 -460 -10 {
 lab=VSS}
 N -160 -320 -160 -200 {
 lab=#net4}
-N -140 -440 -140 -10 {}
 C {devices/ipin.sym} -590 -620 0 0 {name=p1 lab=VDD_1V8}
 C {devices/ipin.sym} -620 -10 0 0 {name=p2 lab=VSS}
 C {devices/ipin.sym} -300 -440 0 0 {name=p4 lab=VP}
