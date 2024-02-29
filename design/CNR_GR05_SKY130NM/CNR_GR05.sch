@@ -5,14 +5,6 @@ K {}
 V {}
 S {}
 E {}
-T {Shift-I          Insert new component
-Shift-Z         Zoom in
-Ctrl-Z           Zoom out
-R                 Rotate
-F                 Full view
-
-Manual: https://xschem.sourceforge.io/stefan/xschem_man/xschem_man.pdf
-} 1160 -880 0 0 0.6 0.6 {}
 N 410 -110 410 -90 {
 lab=VSS}
 N 260 -110 260 -90 {
@@ -149,10 +141,14 @@ N 590 -730 630 -730 {
 lab=Vthreshold}
 N 340 -730 590 -730 {
 lab=Vthreshold}
-N 630 -680 920 -680 {}
-N 920 -680 920 -100 {}
-N 920 -100 920 -90 {}
-N 740 -90 920 -90 {}
+N 630 -680 920 -680 {
+lab=VSS}
+N 920 -680 920 -100 {
+lab=VSS}
+N 920 -100 920 -90 {
+lab=VSS}
+N 740 -90 920 -90 {
+lab=VSS}
 C {cborder/border_s.sym} 520 0 0 0 {
 user="aam"
 company="wulff"}

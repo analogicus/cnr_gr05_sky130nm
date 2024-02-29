@@ -174,6 +174,8 @@ def plot_files(files, variables, scale, dir):
                 fig.suptitle(variables[i] + " vs Temp \n" + " scaled by " + str(scale[i]))
             elif("output_time" in str(dir)):
                 fig.suptitle(variables[i] + " vs Time \n" + " scaled by " + str(scale[i]))
+            elif("output_tempstep" in str(dir)):
+                fig.suptitle(variables[i] + " vs Time \n" + " scaled by " + str(scale[i]))
         else:
             fig.suptitle(input_title)
         if(default_ylabel):
@@ -183,6 +185,8 @@ def plot_files(files, variables, scale, dir):
         if( "output_tran" in str(dir) ):
             ax.set_xlabel('Temp (C)')
         elif( "output_time" in str(dir) ):
+            ax.set_xlabel('Time (s)')
+        elif( "output_tempstep" in str(dir) ):
             ax.set_xlabel('Time (s)')
         ax.grid(True)
         for file in files:
