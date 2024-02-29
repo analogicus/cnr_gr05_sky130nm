@@ -65,7 +65,7 @@ write
 
 foreach vtemp -40 -20 0 20 40 80 125
   option temp=$vtemp
-  tran 10p 500n 1p
+  tran 10p 250n 1p
   write {cicname}_($vtemp).raw
   end
 

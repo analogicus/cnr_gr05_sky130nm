@@ -10,6 +10,7 @@ show_plots = False
 multi_plots = False
 save_svg = False
 save_png = False
+single_output = False
 
 default_title = True
 default_ylabel = True
@@ -25,6 +26,7 @@ for i in range(len(start_args)):
         print("Usage: python3 plot.py [show_plots] [multi_plots] [title=Title] [ylabel=Ylabel] [.svg] [.png]")
         print("show_plots: Show plots after plotting")
         print("multi_plots: Allow multiple files to be plotted")
+        print("single-output: put all plots in one file")
         print("title=Title: Set the title of the plot")
         print("ylabel=Ylabel: Set the y axis label of the plot")
         print(".svg: Save the plot as an svg file")
@@ -50,6 +52,9 @@ for i in range(len(start_args)):
     elif ".png" in start_args[i]:
         save_png = True
         print("Saving as png")
+    elif "single_output" in start_args[i]:
+        single_output = True
+        print("single_output set to True")
     elif "plot.py" in start_args[i]:
         print("")
     else:
@@ -115,10 +120,11 @@ def choose_file(dir):
         try:
             file_num = int(file_num)
             files_to_plot.append(files[file_num])
+            if( not multi_plots):
+                break
         except:
             print("Invalid input")
-        if( not multi_plots):
-            break
+        
     for i in range(len(files_to_plot)):
         print("Plotting:",files_to_plot[i])
     print("")
@@ -165,21 +171,79 @@ def choose_variable(df):
     return columns_to_print,column_scale
 
 def plot_files(files, variables, scale, dir):
-    for i in range(len(variables)):
-        #print("ploting var :", variables[i])
+    if(not single_output):
+        for i in range(len(variables)):
+            #print("ploting var :", variables[i])
+            fig, ax = plt.subplots(1)
+            fig.tight_layout(pad=5.0)
+            if(default_title):
+                if("output_tran" in str(dir)):
+                    fig.suptitle(variables[i] + " vs Temp \n" + " scaled by " + str(scale[i]))
+                elif("output_time" in str(dir)):
+                    fig.suptitle(variables[i] + " vs Time \n" + " scaled by " + str(scale[i]))
+                elif("output_tempstep" in str(dir)):
+                    fig.suptitle(variables[i] + " vs Time \n" + " scaled by " + str(scale[i]))
+            else:
+                fig.suptitle(input_title)
+            if(default_ylabel):
+                ax.set_ylabel(variables[i])
+            else:
+                ax.set_ylabel(input_ylabel)
+            if( "output_tran" in str(dir) ):
+                ax.set_xlabel('Temp (C)')
+            elif( "output_time" in str(dir) ):
+                ax.set_xlabel('Time (s)')
+            elif( "output_tempstep" in str(dir) ):
+                ax.set_xlabel('Time (s)')
+            ax.grid(True)
+            for file in files:
+                #print("Ploting from file :", file)
+                #print("scaling width :", scale[i])
+                dfs = cs.toDataFrames(cs.ngRawRead(file))
+                df = dfs[0]
+
+                value = df[variables[i]].values.tolist()
+                temp = df[df.columns[0]].values.tolist()
+
+                for x in range(len(value)):
+                    value[x] = value[x]*scale[i]
+
+                rand_color = randomcolor.RandomColor()
+                color = rand_color.generate()[0]
+
+                dir_path = str(dir) + "/"
+                ax.plot(temp, value, label=str(file).replace(dir_path,"").replace(".raw",""), color=color)
+                #ax.legend() # Not recommended for multi plots, not nessesary for single plot
+                
+            if not os.path.exists("plots"):
+                os.mkdir("plots")
+            
+            if(save_svg):
+                print("Saving plot as \"plots/"+ str(variables[i]) + "_plot.svg\"")
+                fig.savefig("plots/"+ str(variables[i]) + "_plot.svg")
+            elif(save_png):
+                print("Saving plot as \"plots/"+ str(variables[i]) + "_plot.png\"")
+                fig.savefig("plots/"+ str(variables[i]) + "_plot.png")
+            else:
+                print("No file type selected, not saving fig")
+
+            if(show_plots):
+                plt.show()
+    else:
+        print("Plotting all variables in one plot")
         fig, ax = plt.subplots(1)
         fig.tight_layout(pad=5.0)
         if(default_title):
             if("output_tran" in str(dir)):
-                fig.suptitle(variables[i] + " vs Temp \n" + " scaled by " + str(scale[i]))
+                fig.suptitle("Variables vs Temp \n")
             elif("output_time" in str(dir)):
-                fig.suptitle(variables[i] + " vs Time \n" + " scaled by " + str(scale[i]))
+                fig.suptitle("Variables vs Time \n")
             elif("output_tempstep" in str(dir)):
-                fig.suptitle(variables[i] + " vs Time \n" + " scaled by " + str(scale[i]))
+                fig.suptitle("Variables vs Time \n")
         else:
             fig.suptitle(input_title)
         if(default_ylabel):
-            ax.set_ylabel(variables[i])
+            ax.set_ylabel("variables")
         else:
             ax.set_ylabel(input_ylabel)
         if( "output_tran" in str(dir) ):
@@ -189,42 +253,42 @@ def plot_files(files, variables, scale, dir):
         elif( "output_tempstep" in str(dir) ):
             ax.set_xlabel('Time (s)')
         ax.grid(True)
+
         for file in files:
-            #print("Ploting from file :", file)
-            #print("scaling width :", scale[i])
-            dfs = cs.toDataFrames(cs.ngRawRead(file))
-            df = dfs[0]
+            for var in variables:
+                for file in files:
+                    dfs = cs.toDataFrames(cs.ngRawRead(file))
+                    df = dfs[0]
 
-            value = df[variables[i]].values.tolist()
-            temp = df[df.columns[0]].values.tolist()
+                    value = df[var].values.tolist()
+                    temp = df[df.columns[0]].values.tolist()
 
-            for x in range(len(value)):
-                value[x] = value[x]*scale[i]
+                    #for x in range(len(value)):
+                    #    value[x] = value[x]*scale[var.index(value)]
 
-            rand_color = randomcolor.RandomColor()
-            color = rand_color.generate()[0]
+                    rand_color = randomcolor.RandomColor()
+                    color = rand_color.generate()[0]
 
-            dir_path = str(dir) + "/"
-            ax.plot(temp, value, label=str(file).replace(dir_path,"").replace(".raw",""), color=color)
-            #ax.legend() # Not recommended for multi plots, not nessesary for single plot
-            
+                    dir_path = str(dir) + "/"  
+                    ax.plot(temp, value, label=str(file).replace(dir_path,"").replace(".raw","") + " " + var, color=color)
+                    #ax.legend()
         if not os.path.exists("plots"):
             os.mkdir("plots")
-        
         if(save_svg):
-            print("Saving plot as \"plots/"+ str(variables[i]) + "_plot.svg\"")
-            fig.savefig("plots/"+ str(variables[i]) + "_plot.svg")
+            print("Saving plot as \"plots/all_plot.svg\"")
+            fig.savefig("plots/"+ "all_plot.svg")
         elif(save_png):
-            print("Saving plot as \"plots/"+ str(variables[i]) + "_plot.png\"")
-            fig.savefig("plots/"+ str(variables[i]) + "_plot.png")
+            print("Saving plot as \"plots/all_plot.png\"")
+            fig.savefig("plots/"+ "all_plot.png")
         else:
             print("No file type selected, not saving fig")
-
         if(show_plots):
             plt.show()
 
-    
-            
+
+
+        
+                
 
 
 

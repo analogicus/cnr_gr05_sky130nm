@@ -44,9 +44,6 @@ temp: netlist
 dut: 
 	perl ../../tech/script/genxdut ../../work/xsch/${CELL}.spice ${CELL}
 
-combine:
-	python3 plot.py show_plots multi_plots .svg
-
 summary:
 	cicsim summary --output "README.md"
 
@@ -55,6 +52,12 @@ slide:
 
 plot:
 	python3 plot.py show_plots .svg
+
+combine:
+	python3 plot.py show_plots multi_plots .svg
+
+single:
+	python3 plot.py show_plots single_output .svg
 
 
 clean:
