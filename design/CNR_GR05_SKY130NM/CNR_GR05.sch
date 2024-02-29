@@ -141,14 +141,10 @@ N 590 -730 630 -730 {
 lab=Vthreshold}
 N 340 -730 590 -730 {
 lab=Vthreshold}
-N 630 -680 920 -680 {
-lab=VSS}
-N 920 -680 920 -100 {
-lab=VSS}
-N 920 -100 920 -90 {
-lab=VSS}
-N 740 -90 920 -90 {
-lab=VSS}
+N 630 -680 920 -680 {}
+N 920 -680 920 -100 {}
+N 920 -100 920 -90 {}
+N 740 -90 920 -90 {}
 C {cborder/border_s.sym} 520 0 0 0 {
 user="aam"
 company="wulff"}
