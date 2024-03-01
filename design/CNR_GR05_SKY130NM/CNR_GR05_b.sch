@@ -109,6 +109,8 @@ N 710 -250 740 -250 {
 lab=VSS}
 N 710 -250 710 -90 {
 lab=VSS}
+N 780 -250 810 -250 {
+lab=Vreset}
 N 610 -220 610 -90 {
 lab=VSS}
 N 560 -720 560 -630 {
@@ -151,62 +153,22 @@ N 610 -580 610 -550 {
 lab=VDD_1V8}
 N 930 -770 1060 -770 {
 lab=Vcomp}
-N 1100 -830 1100 -810 {
-lab=Vcomp}
-N 1100 -730 1100 -710 {
-lab=VSS}
-N 1210 -810 1320 -810 {
-lab=Vcomp}
-N 1100 -810 1210 -810 {
-lab=Vcomp}
-N 1100 -730 1210 -730 {
-lab=VSS}
-N 1210 -730 1320 -730 {
-lab=VSS}
-N 1150 -770 1170 -770 {
-lab=Vcomp}
-N 1260 -770 1280 -770 {
-lab=Vcomp}
-N 1370 -770 1390 -770 {
+N 1140 -770 1160 -770 {
 lab=#net5}
-N 1390 -750 1390 -680 {
+N 1240 -770 1260 -770 {
+lab=#net6}
+N 1340 -770 1360 -770 {
+lab=#net7}
+N 1440 -770 1460 -770 {
+lab=#net8}
+N 1540 -770 1560 -770 {
+lab=#net9}
+N 1640 -770 1670 -770 {
+lab=#net10}
+N 1020 -730 1670 -730 {
 lab=Vcomp}
-N 1020 -680 1390 -680 {
+N 1020 -770 1020 -730 {
 lab=Vcomp}
-N 1020 -770 1020 -680 {
-lab=Vcomp}
-N 1320 -810 1440 -810 {
-lab=Vcomp}
-N 1440 -810 1590 -810 {
-lab=Vcomp}
-N 1590 -810 1590 -800 {
-lab=Vcomp}
-N 1640 -760 1670 -760 {
-lab=TEST}
-N 1520 -760 1550 -760 {
-lab=Vcomp}
-N 1050 -360 1050 -320 {
-lab=VDD_1V8}
-N 1050 -360 1220 -360 {
-lab=VDD_1V8}
-N 1220 -360 1220 -330 {
-lab=VDD_1V8}
-N 1050 -240 1050 -200 {
-lab=VSS}
-N 1050 -200 1220 -200 {
-lab=VSS}
-N 1220 -230 1220 -200 {
-lab=VSS}
-N 1090 -280 1140 -280 {
-lab=VDD_1V8}
-N 1270 -290 1680 -290 {
-lab=TEST}
-N 1680 -760 1680 -290 {
-lab=TEST}
-N 1670 -760 1680 -760 {
-lab=TEST}
-N 820 -280 1000 -280 {
-lab=TEST2}
 C {cborder/border_s.sym} 520 0 0 0 {
 user="aam"
 company="wulff"}
@@ -235,24 +197,16 @@ C {sky130_fd_pr/cap_mim_m3_2.sym} 610 -250 0 0 {name=C3 model=cap_mim_m3_2 W=10 
 C {CNR_ATR_SKY130NM/CNRATR_NCH_4C1F2.sym} 780 -250 0 1 {name=x7 }
 C {sky130_fd_pr/cap_mim_m3_2.sym} 610 -250 0 0 {name=C1 model=cap_mim_m3_2 W=10 L=10 MF=2 spiceprefix=X}
 C {devices/lab_pin.sym} 610 -350 0 1 {name=p5 sig_type=std_logic lab=Vout}
-C {devices/ipin.sym} 780 -250 0 1 {name=p6 lab=Vreset}
+C {devices/ipin.sym} 810 -250 0 1 {name=p6 lab=Vreset}
 C {CNR_GR05_SKY130NM/OTA.sym} 780 -740 0 0 {name=x5}
 C {devices/ipin.sym} 340 -730 0 0 {name=p7 lab=Vthreshold}
 C {devices/lab_pin.sym} 930 -770 0 1 {name=p8 sig_type=std_logic lab=Vcomp}
 C {devices/vsource.sym} 610 -520 0 0 {name=Vtest1 value=0 savecurrent=false}
-C {CNR_GR05_SKY130NM/inv.sym} 1210 -770 0 0 {name=x9}
-C {devices/lab_pin.sym} 1680 -760 0 1 {name=p9 sig_type=std_logic lab=TEST}
-C {devices/lab_pin.sym} 1100 -830 0 1 {name=p10 sig_type=std_logic lab=VDD_1V8}
-C {devices/lab_pin.sym} 1100 -710 0 1 {name=p11 sig_type=std_logic lab=VSS}
-C {CNR_GR05_SKY130NM/inv.sym} 1320 -770 0 0 {name=x10}
-C {CNR_GR05_SKY130NM/inv.sym} 1430 -770 0 0 {name=x11}
-C {CNR_GR05_SKY130NM/AND.sym} 1540 -760 0 0 {name=x12}
-C {devices/lab_pin.sym} 1440 -710 0 1 {name=p12 sig_type=std_logic lab=VSS}
-C {CNR_GR05_SKY130NM/inv.sym} 1700 -760 0 0 {name=x13}
-C {devices/lab_pin.sym} 1590 -720 0 1 {name=p13 sig_type=std_logic lab=VSS}
-C {CNR_GR05_SKY130NM/AND.sym} 1120 -280 0 1 {name=x14}
-C {CNR_GR05_SKY130NM/inv.sym} 940 -280 0 1 {name=x15}
-C {devices/lab_pin.sym} 890 -280 1 0 {name=p14 sig_type=std_logic lab=TEST2
-}
-C {devices/lab_pin.sym} 1220 -200 0 1 {name=p15 sig_type=std_logic lab=VSS}
-C {devices/lab_pin.sym} 1220 -360 0 1 {name=p16 sig_type=std_logic lab=VDD_1V8}
+C {devices/lab_pin.sym} 1790 -750 0 1 {name=p9 sig_type=std_logic lab=TEST}
+C {sky130_stdcells/inv_8.sym} 1100 -770 0 0 {name=x10 VGND=VGND VNB=VNB VPB=VPB VPWR=VPWR prefix=sky130_fd_sc_hd__ }
+C {sky130_stdcells/inv_8.sym} 1200 -770 0 0 {name=x11 VGND=VGND VNB=VNB VPB=VPB VPWR=VPWR prefix=sky130_fd_sc_hd__ }
+C {sky130_stdcells/inv_8.sym} 1300 -770 0 0 {name=x12 VGND=VGND VNB=VNB VPB=VPB VPWR=VPWR prefix=sky130_fd_sc_hd__ }
+C {sky130_stdcells/inv_8.sym} 1400 -770 0 0 {name=x13 VGND=VGND VNB=VNB VPB=VPB VPWR=VPWR prefix=sky130_fd_sc_hd__ }
+C {sky130_stdcells/inv_8.sym} 1500 -770 0 0 {name=x14 VGND=VGND VNB=VNB VPB=VPB VPWR=VPWR prefix=sky130_fd_sc_hd__ }
+C {sky130_stdcells/inv_8.sym} 1600 -770 0 0 {name=x15 VGND=VGND VNB=VNB VPB=VPB VPWR=VPWR prefix=sky130_fd_sc_hd__ }
+C {sky130_stdcells/and2_4.sym} 1730 -750 0 0 {name=x9 VGND=VGND VNB=VNB VPB=VPB VPWR=VPWR prefix=sky130_fd_sc_hd__ }
