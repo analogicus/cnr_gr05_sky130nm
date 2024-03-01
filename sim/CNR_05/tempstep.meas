@@ -1,9 +1,12 @@
 * Measure CNR_05
 .control
 
-load {cicname}.raw
-
 echo "MEAS_START"
+
+foreach vtemp -40 -20 0 20 40 60 80 100 125
+    load {cicname}_($vtemp).raw
+    meas tran tdiff TRIG v(xdut.vcomp) VAL=0.5 RISE=1 TARG v(xdut.vcomp) VAL=0.5 RISE=2
+    end
 
 echo "MEAS_END"
 .endc

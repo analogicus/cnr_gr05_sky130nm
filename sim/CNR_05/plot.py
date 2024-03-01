@@ -213,7 +213,7 @@ def plot_files(files, variables, scale, dir):
 
                 dir_path = str(dir) + "/"
                 ax.plot(temp, value, label=str(file).replace(dir_path,"").replace(".raw",""), color=color)
-                #ax.legend() # Not recommended for multi plots, not nessesary for single plot
+                ax.legend() # Not recommended for multi plots, not nessesary for single plot
                 
             if not os.path.exists("plots"):
                 os.mkdir("plots")
