@@ -26,7 +26,8 @@
 VSS  VSS  0 dc 0
 VDD_1V8  VDD_1V8  0 dc 1.8 
 Vthreshold  Vthreshold  0 dc 0.9 
-Vreset Vreset 0 PULSE(0 1.8 0 1n 1n 10n 100n)
+*Vreset Vreset 0 PULSE(0 1.8 0 1n 1n 10n 100n)
+VPWR_UP VPWR_UP 0 PULSE(0 1.8 1n 1n 1n 10000n 10000n)
 
 *-----------------------------------------------------------------
 * DUT
@@ -65,7 +66,7 @@ write
 
 foreach vtemp -40 -20 0 20 40 80 125
   option temp=$vtemp
-  tran 10p 250n 1p
+  tran 10p 1000n 10p
   write {cicname}_($vtemp).raw
   end
 
