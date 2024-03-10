@@ -1,2 +1,2 @@
 *Automatic generated instance fron ../../tech/scripts/genxdut CNR_GR05
-XDUT VSS VDD_1V8 VPWR_UP Vthreshold  CNR_GR05
+XDUT VSS VDD_1V8 VPWR_UP Vthreshold VY VCLK VA VB  CNR_GR05

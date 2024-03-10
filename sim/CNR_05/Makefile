@@ -59,6 +59,9 @@ combine:
 single:
 	python3 plot.py show_plots single_output .svg
 
+verilog:
+	# This command is not implemented yet, use 'ngspice vlnggen <verilog_file>' instead
+
 
 clean:
 	-rm -rf output_*
@@ -68,3 +71,8 @@ clean:
 	-rm *.pdf
 	-rm *.csv
 	-rm *.svg
+	-rm *.so 
+	-rm -rf *obj_dir
+	-rm inouts.h
+	-rm inputs.h
+	-rm outputs.h

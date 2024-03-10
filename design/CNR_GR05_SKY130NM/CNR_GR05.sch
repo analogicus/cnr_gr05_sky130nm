@@ -189,9 +189,18 @@ N -280 -520 -220 -520 {
 lab=VP}
 N -280 -500 -240 -500 {
 lab=VN}
-N 340 -230 470 -230 {}
-N 370 -270 490 -270 {}
-N 370 -190 490 -190 {}
+N 340 -230 470 -230 {
+lab=VSS}
+N 370 -270 490 -270 {
+lab=#net2}
+N 370 -190 490 -190 {
+lab=#net3}
+N 110 -700 130 -700 {
+lab=VSS}
+N 110 -780 130 -780 {
+lab=VY}
+N 110 -740 110 -700 {
+lab=VSS}
 C {cborder/border_s.sym} 520 0 0 0 {
 user="aam"
 company="wulff"}
@@ -243,3 +252,9 @@ C {devices/lab_pin.sym} 610 -710 0 0 {name=p16 sig_type=std_logic lab=VSS}
 C {devices/lab_pin.sym} 610 -770 0 0 {name=p17 sig_type=std_logic lab=VDD_1V8}
 C {devices/lab_pin.sym} -280 -520 0 0 {name=p3 sig_type=std_logic lab=VP}
 C {devices/lab_pin.sym} -280 -500 0 0 {name=p4 sig_type=std_logic lab=VN}
+C {devices/ipin.sym} 110 -780 0 0 {name=p18 lab=VY}
+C {devices/ipin.sym} 120 -810 0 0 {name=p20 lab=VCLK}
+C {devices/lab_pin.sym} 110 -700 0 0 {name=p19 sig_type=std_logic lab=VSS}
+C {SUN_TR_SKY130NM/SUNTR_RPPO2.sym} 130 -780 1 0 {name=x7 }
+C {devices/ipin.sym} 120 -830 0 0 {name=p24 lab=VA}
+C {devices/opin.sym} 1340 -770 3 0 {name=p25 lab=VB}

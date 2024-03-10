@@ -26,8 +26,13 @@
 VSS  VSS  0 dc 0
 VDD_1V8  VDD_1V8  0 dc 1.8 
 Vthreshold  Vthreshold  0 dc 1.3
-*Vreset Vreset 0 PULSE(0 1.8 0 1n 1n 10n 100n)
 VPWR_UP VPWR_UP 0 PULSE(0 1.8 10n 1n 1n 10000n 10000n)
+
+
+VCLK VCLK 0 PULSE(0 1.8 0 1n 1n 10n 20n)
+VA VA 0 PULSE(0 1.8 0 1n 1n 20n 40n)
+*VB VB 0 PULSE(0 1.8 0 1n 1n 40n 80n)
+
 
 .IC v(xdut.vout)=1.8
 
@@ -36,6 +41,12 @@ VPWR_UP VPWR_UP 0 PULSE(0 1.8 10n 1n 1n 10000n 10000n)
 *-----------------------------------------------------------------
 .include ../xdut.spi
 
+adut [VCLK VA VB] [VY] null vdut
+.model vdut d_cosim simulation="./../verilog_include_file.so" 
+
+* /home/trondfc/aicex/ip/cnr_gr05_sky130nm/sim/CNR_05/output_time
+* /home/trondfc/aicex/ip/cnr_gr05_sky130nm/design/CNR_GR05_SKY130NM
+* ../../../design/CNR_GR05_SKY130NM/verilog_include_file.so
 
 
 *----------------------------------------------------------------
@@ -70,7 +81,7 @@ optran 1 1 1 100n 2u 0
 tran 10p 1n 1p
 *quit
 #else
-tran 10n 100u 1n uic
+tran 1n 1u 1n uic
 write
 quit
 #endif
