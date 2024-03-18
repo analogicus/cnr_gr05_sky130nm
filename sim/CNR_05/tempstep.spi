@@ -71,7 +71,7 @@ unset askquit
 optran 1 1 1 100n 2u 0
 
 
-foreach vtemp -40 -20 0 20 40 60 80 100 125
+foreach vtemp 25 30 35 40 45 50 55 60 65 70 75 80 85 90 95 100 105 110 115 120 125
   option temp=$vtemp
   tran 10n 150u 1n uic
   write {cicname}_($vtemp).raw

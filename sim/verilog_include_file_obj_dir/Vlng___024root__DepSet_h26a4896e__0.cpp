@@ -19,9 +19,7 @@ VL_INLINE_OPT void Vlng___024root___nba_sequent__TOP__0(Vlng___024root* vlSelf) 
     IData/*31:0*/ PulseDurationMeasurement__DOT__temp_value;
     PulseDurationMeasurement__DOT__temp_value = 0;
     // Body
-    vlSelf->temperature_output = ((IData)(vlSelf->reset_n)
-                                   ? (IData)(vlSelf->PulseDurationMeasurement__DOT__temp_value1)
-                                   : 0U);
+    vlSelf->temperature_output = vlSelf->PulseDurationMeasurement__DOT__temp_value1;
     if (VL_LIKELY(vlSelf->reset_n)) {
         if ((0U == (IData)(vlSelf->PulseDurationMeasurement__DOT__state))) {
             vlSelf->PulseDurationMeasurement__DOT__count = 1U;
@@ -48,26 +46,23 @@ VL_INLINE_OPT void Vlng___024root___nba_sequent__TOP__0(Vlng___024root* vlSelf) 
         VL_WRITEF("\tReset\n");
         vlSelf->PulseDurationMeasurement__DOT__state = 0U;
         vlSelf->PulseDurationMeasurement__DOT__count = 0U;
-        vlSelf->PulseDurationMeasurement__DOT__pulse_duration = 0U;
     }
     PulseDurationMeasurement__DOT__temp_value = VL_RTOI_I_D(
-                                                            (8.47170044658200027e+02 
+                                                            (7.38687458231200026e+02 
                                                              + 
-                                                             (((-4.73100000000000021e-07 
+                                                             (((-4.38300000000000001e-07 
                                                                 * 
-                                                                ((VL_ITOR_D_I(12, (IData)(vlSelf->PulseDurationMeasurement__DOT__pulse_duration)) 
-                                                                  * 
-                                                                  VL_ITOR_D_I(12, (IData)(vlSelf->PulseDurationMeasurement__DOT__pulse_duration))) 
-                                                                 * 
-                                                                 VL_ITOR_D_I(12, (IData)(vlSelf->PulseDurationMeasurement__DOT__pulse_duration)))) 
+                                                                VL_ITOR_D_I(12, 
+                                                                            (0xfffU 
+                                                                             & VL_POW_III(12,12,32, (IData)(vlSelf->PulseDurationMeasurement__DOT__pulse_duration), 3U)))) 
                                                                + 
-                                                               (2.00444189999999991e-03 
+                                                               (1.85130680000000010e-03 
                                                                 * 
-                                                                (VL_ITOR_D_I(12, (IData)(vlSelf->PulseDurationMeasurement__DOT__pulse_duration)) 
-                                                                 * 
-                                                                 VL_ITOR_D_I(12, (IData)(vlSelf->PulseDurationMeasurement__DOT__pulse_duration))))) 
+                                                                VL_ITOR_D_I(12, 
+                                                                            (0xfffU 
+                                                                             & VL_POW_III(12,12,32, (IData)(vlSelf->PulseDurationMeasurement__DOT__pulse_duration), 2U))))) 
                                                               + 
-                                                              (-2.47347346269999990e+00 
+                                                              (-2.24963104249999990e+00 
                                                                * 
                                                                VL_ITOR_D_I(12, (IData)(vlSelf->PulseDurationMeasurement__DOT__pulse_duration))))));
     vlSelf->PulseDurationMeasurement__DOT__temp_value1 
@@ -141,7 +136,7 @@ void Vlng___024root___eval(Vlng___024root* vlSelf) {
 #ifdef VL_DEBUG
             Vlng___024root___dump_triggers__nba(vlSelf);
 #endif
-            VL_FATAL_MT("../../design/CNR_GR05_SKY130NM/verilog_include_file.v", 1, "", "NBA region did not converge.");
+            VL_FATAL_MT("../design/CNR_GR05_SKY130NM/verilog_include_file.v", 1, "", "NBA region did not converge.");
         }
         __VnbaIterCount = ((IData)(1U) + __VnbaIterCount);
         __VnbaContinue = 0U;
@@ -152,7 +147,7 @@ void Vlng___024root___eval(Vlng___024root* vlSelf) {
 #ifdef VL_DEBUG
                 Vlng___024root___dump_triggers__act(vlSelf);
 #endif
-                VL_FATAL_MT("../../design/CNR_GR05_SKY130NM/verilog_include_file.v", 1, "", "Active region did not converge.");
+                VL_FATAL_MT("../design/CNR_GR05_SKY130NM/verilog_include_file.v", 1, "", "Active region did not converge.");
             }
             vlSelf->__VactIterCount = ((IData)(1U) 
                                        + vlSelf->__VactIterCount);
