@@ -5,7 +5,6 @@ echo "MEAS_START"
 
 foreach vtemp -40 -20 0 20 40 60 80 100 125
     load {cicname}_($vtemp).raw
-    meas tran tdiff TRIG v(xdut.vcomp2) VAL=1.2 RISE=2 TARG v(xdut.vcomp2) VAL=1.2 RISE=3
     end
 
 echo "MEAS_END"
