@@ -2,6 +2,7 @@
 *.ext
 __pycache__
 output_*/
+verilog*/
 *.tcl
 *.log
 work/

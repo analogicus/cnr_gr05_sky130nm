@@ -44,6 +44,9 @@ temp: netlist
 dut: 
 	perl ../../tech/script/genxdut ../../work/xsch/${CELL}.spice ${CELL}
 
+csv:
+	python3 raw2csv.py
+
 summary:
 	cicsim summary --output "README.md"
 
