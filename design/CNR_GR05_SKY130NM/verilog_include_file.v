@@ -23,7 +23,7 @@ reg signed [8:0] temp_value1;
 
 // Constants declaration
 parameter IDLE = 2'b00;
-parameter HIGH = 2'b01;
+parameter COUNT = 2'b01;
 
 // Constants for temperature conversion
 parameter GAIN3 = -0.0000004731;
@@ -44,12 +44,12 @@ always_ff @(posedge clk) begin
             IDLE: begin
                 count = 12'b000000000001;
                 if (signal_in == 0) begin
-                    state = HIGH;
+                    state = COUNT;
                     $display("\t\t\t\t\tMeasurement finished \t\t Measured temperature: %d", temperature_output);
                 end 
             end
 
-            HIGH: begin
+            COUNT: begin
                 if (signal_in == 0) begin
                     count = count + 1;
                 end else begin
