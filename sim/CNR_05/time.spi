@@ -41,7 +41,7 @@ VCLK VCLK 0 PULSE(0 1.8 0 1n 1n 12.5n 25n)
 *-----------------------------------------------------------------
 .include ../xdut.spi
 
-adut [VCLK VPWR_UP VB] [~D8 ~D7 ~D6 ~D5 ~D4 ~D3 ~D2 ~D1 ~D0] null vdut
+adut [VCLK VPWR_UP VB] [~D12 ~D11 ~D10 ~D9 ~D8 ~D7 ~D6 ~D5 ~D4 ~D3 ~D2 ~D1 ~D0] null vdut
 *adut [clk reset_n signal_in] [~D7 ~D6 ~D5 ~D4 ~D3 ~D2 ~D1 ~D0] null vdut
 *.model vdut d_cosim simulation="./../pulseDuration.so" 
 
@@ -65,8 +65,22 @@ adut [VCLK VPWR_UP VB] [~D8 ~D7 ~D6 ~D5 ~D4 ~D3 ~D2 ~D1 ~D0] null vdut
 #else
 *.save ${VPORTS}
 .save v(xdut.vcomp)
+.save v(d0)
+.save v(d1)
+.save v(d2)
+.save v(d3)
+.save v(d4)
+.save v(d5)
+.save v(d6)
+.save v(d7)
+.save v(d8)
+.save v(d9)
+.save v(d10)
+.save v(d11)
+.save v(d12)
+.save v(xdut.vout)  
 #endif
-.save all
+*.save all
 *----------------------------------------------------------------
 * NGSPICE control
 *----------------------------------------------------------------
@@ -84,7 +98,7 @@ optran 1 1 1 100n 2u 0
 tran 10p 1n 1p
 *quit
 #else
-tran 10n 150u 1n uic
+tran 10n 250u 1n uic
 write
 quit
 #endif

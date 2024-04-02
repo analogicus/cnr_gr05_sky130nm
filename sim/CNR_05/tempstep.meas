@@ -3,9 +3,9 @@
 
 echo "MEAS_START"
 
-foreach vtemp -40 -20 0 20 40 60 80 100 125
-    load {cicname}_($vtemp).raw
-    end
+*foreach vtemp -40 -20 0 20 40 60 80 100 125
+*    load {cicname}_($vtemp).raw
+*    end
 
 echo "MEAS_END"
 .endc

@@ -8,7 +8,7 @@ import matplotlib.pyplot as plt
 
 def main(name):
   # Uncomment the following line to disable 
-  #return
+  return
 
   dfs = cs.toDataFrames(cs.ngRawRead(name + ".raw"))
   df = dfs[0]

@@ -40,7 +40,7 @@ VCLK VCLK 0 PULSE(0 1.8 0 1n 1n 12.5n 25n)
 * DUT
 *-----------------------------------------------------------------
 .include ../xdut.spi
-adut [VCLK VPWR_UP VB] [~D8 ~D7 ~D6 ~D5 ~D4 ~D3 ~D2 ~D1 ~D0] null vdut
+adut [VCLK VPWR_UP VB] [~D12 ~D11 ~D10 ~D9 ~D8 ~D7 ~D6 ~D5 ~D4 ~D3 ~D2 ~D1 ~D0] null vdut
 .model vdut d_cosim simulation="./../verilog_include_file.so" 
 
 
@@ -57,8 +57,24 @@ adut [VCLK VPWR_UP VB] [~D8 ~D7 ~D6 ~D5 ~D4 ~D3 ~D2 ~D1 ~D0] null vdut
 .save all
 #else
 *.save ${VPORTS}
+.save v(xdut.vcomp)
+.save v(VB)
+.save v(d0)
+.save v(d1)
+.save v(d2)
+.save v(d3)
+.save v(d4)
+.save v(d5)
+.save v(d6)
+.save v(d7)
+.save v(d8)
+.save v(d9)
+.save v(d10)
+.save v(d11)
+.save v(d12)
+.save v(xdut.vout)
 #endif
-.save all
+*.save all
 *----------------------------------------------------------------
 * NGSPICE control
 *----------------------------------------------------------------
@@ -71,9 +87,9 @@ unset askquit
 optran 1 1 1 100n 2u 0
 
 
-foreach vtemp 25 30 35 40 45 50 55 60 65 70 75 80 85 90 95 100 105 110 115 120 125
+foreach vtemp -40 -30 -20 -10 0 10 20 30 40 50 60 70 80 90 100 110 120
   option temp=$vtemp
-  tran 10n 150u 1n uic
+  tran 10n 200u 1n uic
   write {cicname}_($vtemp).raw
   end
 

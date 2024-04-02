@@ -152,11 +152,11 @@ lab=#net8}
 N 1720 -500 1900 -500 {
 lab=#net8}
 N 780 -250 1380 -250 {
-lab=TEST1}
+lab=VB}
 N 1380 -540 1380 -250 {
-lab=TEST1}
+lab=VB}
 N 1380 -540 1420 -540 {
-lab=TEST1}
+lab=VB}
 N 610 -770 630 -770 {
 lab=VDD_1V8}
 N 610 -710 630 -710 {
@@ -249,6 +249,30 @@ N -780 -840 -780 -800 {
 lab=VSS}
 N -780 -800 -760 -800 {
 lab=VSS}
+N -890 -880 -870 -880 {
+lab=D9}
+N -890 -840 -890 -800 {
+lab=VSS}
+N -890 -800 -870 -800 {
+lab=VSS}
+N -990 -870 -970 -870 {
+lab=D10}
+N -990 -830 -990 -790 {
+lab=VSS}
+N -990 -790 -970 -790 {
+lab=VSS}
+N -1110 -880 -1090 -880 {
+lab=D11}
+N -1110 -840 -1110 -800 {
+lab=VSS}
+N -1110 -800 -1090 -800 {
+lab=VSS}
+N -1230 -890 -1210 -890 {
+lab=D8}
+N -1230 -850 -1230 -810 {
+lab=VSS}
+N -1230 -810 -1210 -810 {
+lab=VSS}
 C {cborder/border_s.sym} 520 0 0 0 {
 user="aam"
 company="wulff"}
@@ -327,3 +351,15 @@ C {devices/ipin.sym} -780 -880 0 0 {name=p38 lab=D8}
 C {SUN_TR_SKY130NM/SUNTR_RPPO2.sym} -760 -880 1 0 {name=x24 }
 C {devices/lab_pin.sym} -780 -800 0 0 {name=p39 sig_type=std_logic lab=VSS}
 C {devices/ipin.sym} 1400 -540 3 0 {name=p25 lab=VB}
+C {devices/ipin.sym} -890 -880 0 0 {name=p15 lab=D9}
+C {SUN_TR_SKY130NM/SUNTR_RPPO2.sym} -870 -880 1 0 {name=x25 }
+C {devices/lab_pin.sym} -890 -800 0 0 {name=p40 sig_type=std_logic lab=VSS}
+C {devices/ipin.sym} -990 -870 0 0 {name=p41 lab=D10}
+C {SUN_TR_SKY130NM/SUNTR_RPPO2.sym} -970 -870 1 0 {name=x26 }
+C {devices/lab_pin.sym} -990 -790 0 0 {name=p42 sig_type=std_logic lab=VSS}
+C {devices/ipin.sym} -1110 -880 0 0 {name=p43 lab=D11}
+C {SUN_TR_SKY130NM/SUNTR_RPPO2.sym} -1090 -880 1 0 {name=x27 }
+C {devices/lab_pin.sym} -1110 -800 0 0 {name=p44 sig_type=std_logic lab=VSS}
+C {devices/ipin.sym} -1230 -890 0 0 {name=p45 lab=D12}
+C {SUN_TR_SKY130NM/SUNTR_RPPO2.sym} -1210 -890 1 0 {name=x28 }
+C {devices/lab_pin.sym} -1230 -810 0 0 {name=p46 sig_type=std_logic lab=VSS}
