@@ -4,7 +4,7 @@ all: typical etc mc summary
 
 include ../../tech/make/sim.make
 
-TB=time
+TB=tran
 VIEW=Sch
 #VIEW=Lay
 CELL=CNR_GR05
