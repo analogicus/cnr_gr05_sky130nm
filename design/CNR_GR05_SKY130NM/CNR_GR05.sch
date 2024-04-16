@@ -18,7 +18,7 @@ lab=VN}
 N 260 -310 260 -260 {
 lab=VN}
 N 300 -420 370 -420 {
-lab=LPI}
+lab=#net1}
 N 410 -530 410 -450 {
 lab=VDD_1V8}
 N 260 -530 260 -450 {
@@ -48,19 +48,19 @@ lab=VDD_1V8}
 N 410 -580 440 -580 {
 lab=VDD_1V8}
 N 410 -290 410 -270 {
-lab=#net1}
-N 410 -190 410 -170 {
 lab=#net2}
+N 410 -190 410 -170 {
+lab=#net3}
 N 340 -230 340 -90 {
 lab=VSS}
 N 140 -540 140 -490 {
-lab=#net3}
+lab=#net1}
 N 330 -490 330 -420 {
-lab=LPI}
+lab=#net1}
 N 330 -490 570 -490 {
-lab=LPI}
+lab=#net1}
 N 570 -490 570 -420 {
-lab=LPI}
+lab=#net1}
 N 440 -580 610 -580 {
 lab=VDD_1V8}
 N 610 -420 640 -420 {
@@ -187,12 +187,6 @@ N -280 -520 -220 -520 {
 lab=VP}
 N -280 -500 -240 -500 {
 lab=VN}
-N 340 -230 470 -230 {
-lab=VSS}
-N 370 -270 490 -270 {
-lab=#net1}
-N 370 -190 490 -190 {
-lab=#net2}
 N -680 -880 -660 -880 {
 lab=D7}
 N -680 -840 -680 -800 {
@@ -248,10 +242,41 @@ lab=VSS}
 N -780 -800 -760 -800 {
 lab=VSS}
 N 300 -490 330 -490 {
-lab=LPI}
+lab=#net1}
 N 140 -490 170 -490 {
+lab=#net1}
+N 170 -490 300 -490 {
+lab=#net1}
+N 340 -230 390 -230 {
+lab=VSS}
+N 370 -270 410 -270 {
+lab=#net2}
+N 370 -190 410 -190 {
 lab=#net3}
-N 170 -490 300 -490 {}
+N 930 -780 930 -770 {
+lab=Vcomp}
+N -160 -510 -160 -500 {
+lab=VN}
+N -210 -620 -160 -490 {
+lab=#net9}
+N -510 -620 -220 -520 {
+lab=VP}
+N -510 -600 -380 -420 {
+lab=VSS}
+N -380 -420 -160 -420 {
+lab=VSS}
+N -160 -530 -160 -520 {
+lab=VP}
+N 630 -710 630 -700 {
+lab=VSS}
+N 630 -780 630 -770 {
+lab=VDD_1V8}
+N 630 -760 630 -750 {
+lab=Vout}
+N 630 -740 630 -730 {
+lab=Vthreshold}
+N -200 -600 630 -720 {
+lab=#net10}
 C {cborder/border_s.sym} 520 0 0 0 {
 user="aam"
 company="wulff"}
@@ -269,7 +294,6 @@ spiceprefix=X
 }
 C {devices/vsource.sym} 410 -320 0 0 {name=Vtest3 value=0 savecurrent=false}
 C {SUN_TR_SKY130NM/SUNTR_RPPO2.sym} 410 -270 1 0 {name=x2 }
-C {SUN_TR_SKY130NM/SUNTR_RPPO2.sym} 490 -270 1 0 {name=x3 }
 C {CNR_GR05_SKY130NM/OTA.sym} -10 -510 0 0 {name=x1}
 C {sky130_fd_pr/cap_mim_m3_2.sym} 610 -250 0 0 {name=C3 model=cap_mim_m3_2 W=100 L=200 MF=2 spiceprefix=X}
 C {devices/lab_pin.sym} 610 -350 0 1 {name=p5 sig_type=std_logic lab=Vout}
@@ -290,7 +314,6 @@ C {devices/lab_pin.sym} 1760 -540 0 1 {name=p14 sig_type=std_logic lab=VDD_1V8}
 C {CNR_ATR_SKY130NM/CNRATR_PCH_2C1F2.sym} 570 -420 0 0 {name=x12 }
 C {CNR_ATR_SKY130NM/CNRATR_PCH_12C1F2.sym} 370 -420 0 0 {name=x4 }
 C {CNR_ATR_SKY130NM/CNRATR_PCH_12C1F2.sym} 300 -420 0 1 {name=x6 }
-C {SUN_TR_SKY130NM/SUNTR_RPPO2.sym} 450 -270 1 0 {name=x8 }
 C {SUN_TR_SKY130NM/SUNTR_RPPO2.sym} 370 -270 1 0 {name=x13 }
 C {CNR_ATR_SKY130NM/CNRATR_NCH_12C1F2.sym} 780 -250 0 1 {name=x14 }
 C {CNR_GR05_SKY130NM/INV.sym} 1230 -770 0 0 {name=x15}
@@ -330,3 +353,4 @@ C {devices/ipin.sym} -780 -880 0 0 {name=p38 lab=D8}
 C {SUN_TR_SKY130NM/SUNTR_RPPO2.sym} -760 -880 1 0 {name=x24 }
 C {devices/lab_pin.sym} -780 -800 0 0 {name=p39 sig_type=std_logic lab=VSS}
 C {devices/ipin.sym} 1400 -540 3 0 {name=p25 lab=VB}
+C {CNR_GR05_SKY130NM/IREF.sym} -360 -610 0 0 {name=x3}

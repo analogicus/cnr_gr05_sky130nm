@@ -1,0 +1,77 @@
+magic
+tech sky130B
+timestamp 1712998694
+<< locali >>
+rect -46 2270 626 2277
+rect -46 2240 268 2270
+rect 298 2240 626 2270
+rect -46 2232 626 2240
+rect -46 2186 50 2232
+rect 530 2184 626 2232
+rect 300 27 302 60
+rect -48 -67 48 -13
+rect 528 -67 624 -11
+rect -48 -75 624 -67
+rect -48 -105 267 -75
+rect 297 -105 624 -75
+rect -48 -119 624 -105
+<< viali >>
+rect 268 2240 298 2270
+rect 263 2110 304 2146
+rect 270 1640 306 1676
+rect 402 1209 434 1241
+rect 405 932 431 958
+rect 273 495 303 525
+rect 264 25 300 61
+rect 267 -105 297 -75
+<< metal1 >>
+rect 265 2270 301 2276
+rect 265 2240 268 2270
+rect 298 2240 301 2270
+rect 265 2149 301 2240
+rect 257 2146 310 2149
+rect 257 2110 263 2146
+rect 304 2110 310 2146
+rect 257 2107 310 2110
+rect 267 1676 309 1682
+rect 267 1640 270 1676
+rect 306 1640 309 1676
+rect 267 1634 309 1640
+rect 270 525 306 1634
+rect 396 1241 440 1244
+rect 396 1209 402 1241
+rect 434 1209 440 1241
+rect 396 1206 440 1209
+rect 402 958 434 1206
+rect 402 932 405 958
+rect 431 932 434 958
+rect 402 926 434 932
+rect 270 495 273 525
+rect 303 495 306 525
+rect 270 489 306 495
+rect 258 61 306 64
+rect 258 25 264 61
+rect 300 25 306 61
+rect 258 22 306 25
+rect 264 -75 300 22
+rect 264 -105 267 -75
+rect 297 -105 300 -75
+rect 264 -111 300 -105
+use CNRATR_NCH_2C12F0  CNRATR_NCH_2C12F0_1 ~/aicex/ip/cnr_gr05_sky130nm/design/CNR_ATR_SKY130NM
+timestamp 1695852000
+transform 1 0 0 0 1 0
+box -92 -62 668 1084
+use CNRATR_PCH_2C12F0  CNRATR_PCH_2C12F0_0 ~/aicex/ip/cnr_gr05_sky130nm/design/CNR_ATR_SKY130NM
+timestamp 1695852000
+transform 1 0 2 0 1 1147
+box -92 -62 668 1084
+<< labels >>
+flabel metal1 275 1070 295 1115 0 FreeSans 100 0 0 0 O
+port 4 nsew
+flabel metal1 410 1075 430 1115 0 FreeSans 100 0 0 0 I
+port 3 nsew
+flabel locali -1 -104 61 -83 0 FreeSans 400 0 0 0 VSS
+port 2 nsew
+flabel locali 107 2247 165 2253 0 FreeSans 200 0 0 0 VDD_1V8
+port 1 nsew
+<< end >>

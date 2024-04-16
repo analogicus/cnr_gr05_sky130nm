@@ -1,6 +1,6 @@
 magic
 tech sky130B
-timestamp 1712738273
+timestamp 1712909762
 << locali >>
 rect -415 1590 620 1645
 rect -415 1535 -135 1590
@@ -11,10 +11,9 @@ rect -293 1032 -262 1037
 rect -305 107 -260 134
 rect 78 108 123 135
 rect 459 108 504 135
-rect -415 -140 -135 -85
-rect -40 -140 240 -85
-rect 340 -140 620 -85
-rect -415 -195 620 -140
+rect -41 -85 238 -81
+rect 609 -85 619 -84
+rect -416 -109 619 -85
 << viali >>
 rect -370 1446 -340 1476
 rect 544 1445 574 1476
@@ -130,8 +129,6 @@ box -92 -62 764 306
 << labels >>
 flabel locali 34 1594 64 1624 0 FreeSans 200 0 0 0 VDD_1V8
 port 1 nsew
-flabel locali 65 -175 140 -155 0 FreeSans 400 0 0 0 VSS
-port 2 nsew
 flabel locali 471 118 485 128 0 FreeSans 100 0 0 0 VN
 port 3 nsew
 flabel locali -285 116 -271 126 0 FreeSans 100 0 0 0 VP
@@ -140,4 +137,6 @@ flabel metal1 642 719 672 749 0 FreeSans 200 0 0 0 VO
 port 5 nsew
 flabel locali 88 117 102 127 0 FreeSans 100 0 0 0 Vtail
 port 6 nsew
+flabel locali 64 -107 139 -87 0 FreeSans 400 0 0 0 VSS
+port 2 nsew
 << end >>
