@@ -1,0 +1,32 @@
+magic
+tech sky130B
+timestamp 1713359029
+use AND  AND_0
+timestamp 1713000619
+transform 1 0 1235 0 1 -4394
+box -1107 -1450 1054 740
+use INV  INV_0
+timestamp 1712998694
+transform 0 -1 2282 1 0 -6563
+box -92 -119 670 2277
+use INV  INV_1
+timestamp 1712998694
+transform 0 -1 2277 1 0 91
+box -92 -119 670 2277
+use INV  INV_2
+timestamp 1712998694
+transform 0 -1 2277 1 0 -796
+box -92 -119 670 2277
+use INV  INV_3
+timestamp 1712998694
+transform 0 -1 2276 1 0 -1694
+box -92 -119 670 2277
+use INV  INV_4
+timestamp 1712998694
+transform 0 -1 2271 1 0 -2582
+box -92 -119 670 2277
+use INV  INV_5
+timestamp 1712998694
+transform 0 -1 2275 1 0 -3479
+box -92 -119 670 2277
+<< end >>

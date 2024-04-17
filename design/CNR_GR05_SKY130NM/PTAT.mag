@@ -1,13 +1,13 @@
 magic
 tech sky130B
 magscale 1 2
-timestamp 1712914777
+timestamp 1713365206
 << locali >>
 rect -2070 8300 3390 8590
 rect -2060 8170 -320 8300
 rect -2060 4718 -780 8170
 rect 1700 7990 3390 8300
-rect 560 5316 782 5372
+rect 784 6024 834 6062
 rect 2100 4888 3390 7990
 rect 2100 4730 3392 4888
 rect 2100 4729 3762 4730
@@ -158,9 +158,9 @@ timestamp 1695852000
 transform 1 0 -2346 0 1 4194
 box -184 -124 2296 613
 use OTA  OTA_0
-timestamp 1712909762
+timestamp 1713364606
 transform 1 0 470 0 1 5100
-box -920 -260 1344 3290
+box -920 -262 1344 3290
 use sky130_fd_pr__rf_pnp_05v5_W3p40L3p40  sky130_fd_pr__rf_pnp_05v5_W3p40L3p40_0 $PDKPATH/libs.ref/sky130_fd_pr/mag
 timestamp 1705271942
 transform 1 0 -1350 0 1 0
@@ -182,10 +182,10 @@ timestamp 1712574495
 transform 0 1 -4270 1 0 1370
 box 0 0 2672 4236
 << labels >>
-flabel locali 560 5316 782 5372 0 FreeSans 200 0 0 0 Vtail
-port 3 nsew
 flabel locali -1988 8424 2960 8526 0 FreeSans 200 0 0 0 VDD_1V8
 port 1 nsew
 flabel locali -3778 -114 5408 -4 0 FreeSans 200 0 0 0 VSS
 port 2 nsew
+flabel locali 784 6024 834 6062 0 FreeSans 800 0 0 0 Vtail
+port 3 nsew
 << end >>

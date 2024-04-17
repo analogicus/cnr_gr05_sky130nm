@@ -57,8 +57,10 @@ N -230 -90 -200 -90 {
 lab=Vtail}
 N -160 -90 -140 -90 {
 lab=VSS}
-N -30 -440 -10 -440 {}
-N -320 -440 -300 -440 {}
+N -30 -440 -10 -440 {
+lab=VN}
+N -320 -440 -300 -440 {
+lab=VP}
 C {devices/ipin.sym} -590 -620 0 0 {name=p1 lab=VDD_1V8}
 C {devices/ipin.sym} -620 -10 0 0 {name=p2 lab=VSS}
 C {devices/ipin.sym} -320 -440 0 0 {name=p4 lab=VP}
@@ -69,5 +71,5 @@ C {CNR_ATR_SKY130NM/CNRATR_NCH_4C1F2.sym} -300 -440 0 0 {name=x7 }
 C {CNR_ATR_SKY130NM/CNRATR_NCH_4C1F2.sym} -30 -440 0 1 {name=x1 }
 C {CNR_ATR_SKY130NM/CNRATR_PCH_4C1F2.sym} -110 -590 0 0 {name=x2 }
 C {CNR_ATR_SKY130NM/CNRATR_PCH_4C1F2.sym} -220 -590 0 1 {name=x3 }
-C {CNR_ATR_SKY130NM/CNRATR_NCH_8C1F2.sym} -200 -90 0 0 {name=x5 }
 C {devices/ipin.sym} -230 -90 0 0 {name=p6 lab=Vtail}
+C {CNR_ATR_SKY130NM/CNRATR_NCH_4C2F0.sym} -200 -90 0 0 {name=x4 }

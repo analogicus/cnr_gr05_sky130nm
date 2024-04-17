@@ -1,6 +1,6 @@
 magic
 tech sky130B
-timestamp 1712909762
+timestamp 1713364606
 << locali >>
 rect -415 1590 620 1645
 rect -415 1535 -135 1590
@@ -8,8 +8,8 @@ rect 340 1540 620 1590
 rect -258 1318 -255 1350
 rect 464 1037 490 1046
 rect -293 1032 -262 1037
+rect 93 460 119 486
 rect -305 107 -260 134
-rect 78 108 123 135
 rect 459 108 504 135
 rect -41 -85 238 -81
 rect 609 -85 619 -84
@@ -24,15 +24,13 @@ rect 541 1186 577 1222
 rect -290 1110 -258 1142
 rect -293 1037 -260 1069
 rect 462 1046 498 1082
-rect -296 458 -264 490
-rect 84 458 116 490
-rect 467 461 493 487
 rect -292 386 -266 412
 rect 461 379 491 409
-rect 5 240 35 266
-rect 163 238 191 265
-rect 10 -15 30 5
-rect 166 -17 188 4
+rect -215 234 -179 270
+rect 92 233 127 268
+rect 385 236 414 265
+rect 95 105 127 137
+rect 98 -51 124 -25
 << metal1 >>
 rect -373 1476 -337 1482
 rect -373 1446 -370 1476
@@ -71,16 +69,6 @@ rect 498 1046 672 1082
 rect 456 1043 504 1046
 rect -459 415 -426 1037
 rect -299 1034 -254 1037
-rect -299 490 -261 496
-rect 81 490 119 496
-rect -299 458 -296 490
-rect -264 458 84 490
-rect 116 487 499 490
-rect 116 461 467 487
-rect 493 461 499 487
-rect 116 458 499 461
-rect -299 452 -261 458
-rect 81 452 119 458
 rect -459 412 -260 415
 rect 636 412 672 1046
 rect -459 386 -292 412
@@ -90,22 +78,26 @@ rect 455 409 672 412
 rect 455 379 461 409
 rect 491 379 672 409
 rect 455 376 672 379
-rect -1 266 41 269
-rect -1 240 5 266
-rect 35 240 41 266
-rect -1 237 41 240
-rect 157 265 197 268
-rect 157 238 163 265
-rect 191 238 197 265
-rect 7 5 33 237
-rect 157 235 197 238
-rect 7 -15 10 5
-rect 30 -15 33 5
-rect 7 -21 33 -15
-rect 163 4 191 235
-rect 163 -17 166 4
-rect 188 -17 191 4
-rect 163 -23 191 -17
+rect -218 270 -176 276
+rect 89 270 130 274
+rect -218 234 -215 270
+rect -179 268 130 270
+rect -179 234 92 268
+rect -218 228 -176 234
+rect 89 233 92 234
+rect 127 265 420 268
+rect 127 236 385 265
+rect 414 236 420 265
+rect 127 233 420 236
+rect 89 227 130 233
+rect 89 137 133 140
+rect 89 105 95 137
+rect 127 105 133 137
+rect 89 102 133 105
+rect 95 -25 127 102
+rect 95 -51 98 -25
+rect 124 -51 127 -25
+rect 95 -57 127 -51
 use CNRATR_NCH_4C1F2  CNRATR_NCH_4C1F2_0 ~/aicex/ip/cnr_gr05_sky130nm/design/CNR_ATR_SKY130NM
 timestamp 1695852000
 transform 0 1 -398 -1 0 634
@@ -114,10 +106,10 @@ use CNRATR_NCH_4C1F2  CNRATR_NCH_4C1F2_1
 timestamp 1695852000
 transform 0 1 357 -1 0 634
 box -92 -62 764 306
-use CNRATR_NCH_8C1F2  CNRATR_NCH_8C1F2_1 ~/aicex/ip/cnr_gr05_sky130nm/design/CNR_ATR_SKY130NM
+use CNRATR_NCH_4C2F0  CNRATR_NCH_4C2F0_0 ~/aicex/ip/cnr_gr05_sky130nm/design/CNR_ATR_SKY130NM
 timestamp 1695852000
-transform 0 1 -23 -1 0 826
-box -92 -62 956 306
+transform 0 -1 261 1 0 -39
+box -92 -62 764 364
 use CNRATR_PCH_4C1F2  CNRATR_PCH_4C1F2_0 ~/aicex/ip/cnr_gr05_sky130nm/design/CNR_ATR_SKY130NM
 timestamp 1695852000
 transform 0 -1 -154 1 0 822
@@ -135,8 +127,8 @@ flabel locali -285 116 -271 126 0 FreeSans 100 0 0 0 VP
 port 4 nsew
 flabel metal1 642 719 672 749 0 FreeSans 200 0 0 0 VO
 port 5 nsew
-flabel locali 88 117 102 127 0 FreeSans 100 0 0 0 Vtail
-port 6 nsew
 flabel locali 64 -107 139 -87 0 FreeSans 400 0 0 0 VSS
 port 2 nsew
+flabel locali 93 460 119 486 0 FreeSans 800 0 0 0 Vtail
+port 6 nsew
 << end >>
