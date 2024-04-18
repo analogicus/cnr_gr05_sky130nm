@@ -7,8 +7,6 @@ S {}
 E {}
 N 10 -50 90 -50 {
 lab=TEST}
-N 50 -60 50 -50 {
-lab=TEST}
 N 140 10 140 30 {
 lab=VSS}
 N 140 -120 140 -90 {
@@ -81,8 +79,8 @@ N -260 -50 -260 -10 {
 lab=#net5}
 N -260 50 -260 80 {
 lab=VSS}
-N -650 -50 40 30 {}
-C {devices/lab_pin.sym} 50 -60 3 1 {name=p11 sig_type=std_logic lab=TEST}
+N -650 -50 40 30 {
+lab=A}
 C {CNR_GR05_SKY130NM/AND.sym} 240 -40 0 0 {name=x12}
 C {devices/lab_pin.sym} 140 -120 3 1 {name=p12 sig_type=std_logic lab=VDD_1V8}
 C {devices/lab_pin.sym} 140 30 1 1 {name=p13 sig_type=std_logic lab=VSS}
