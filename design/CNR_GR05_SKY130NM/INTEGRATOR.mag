@@ -1,25 +1,26 @@
 magic
 tech sky130B
 magscale 1 2
-timestamp 1713523302
+timestamp 1713524416
 << locali >>
 rect 23778 3580 24140 3694
-rect 23926 3336 23996 3338
 rect 23764 2830 24154 3148
 rect 23794 -14024 24194 -13760
+rect 23800 -14286 24190 -14024
 rect 23794 -15770 24182 -15686
 << viali >>
-rect 23925 3338 23997 3410
+rect 23927 3359 23998 3430
 rect 23794 -13760 24194 -13360
 rect 23963 -15519 24021 -15461
 << metal1 >>
 rect 23772 4646 24172 4652
 rect 23772 4240 24172 4246
-rect 23925 3416 23997 4240
-rect 23913 3410 24009 3416
-rect 23913 3338 23925 3410
-rect 23997 3338 24009 3410
-rect 23913 3332 24009 3338
+rect 23878 4200 24036 4240
+rect 23927 3436 23998 4200
+rect 23915 3430 24010 3436
+rect 23915 3359 23927 3430
+rect 23998 3359 24010 3430
+rect 23915 3353 24010 3359
 rect 23788 -13354 24200 -13348
 rect 23782 -13754 23788 -13354
 rect 24200 -13754 24206 -13354
@@ -195,142 +196,142 @@ timestamp 1695852000
 transform 0 -1 24205 1 0 2802
 box -184 -124 1336 613
 use sky130_fd_pr__cap_mim_m3_2_MJA9VW  sky130_fd_pr__cap_mim_m3_2_MJA9VW_0
-timestamp 1713523187
+timestamp 1713523920
 transform 0 -1 45195 1 0 -14585
-box 0 0 1 1
+box -2849 -2581 2871 2581
 use sky130_fd_pr__cap_mim_m3_2_MJA9VW  sky130_fd_pr__cap_mim_m3_2_MJA9VW_1
-timestamp 1713523187
+timestamp 1713523920
 transform 0 1 19217 -1 0 -8445
-box 0 0 1 1
+box -2849 -2581 2871 2581
 use sky130_fd_pr__cap_mim_m3_2_MJA9VW  sky130_fd_pr__cap_mim_m3_2_MJA9VW_2
-timestamp 1713523187
+timestamp 1713523920
 transform 0 -1 19155 1 0 -2535
-box 0 0 1 1
+box -2849 -2581 2871 2581
 use sky130_fd_pr__cap_mim_m3_2_MJA9VW  sky130_fd_pr__cap_mim_m3_2_MJA9VW_3
-timestamp 1713523187
+timestamp 1713523920
 transform 0 1 19169 -1 0 3529
-box 0 0 1 1
+box -2849 -2581 2871 2581
 use sky130_fd_pr__cap_mim_m3_2_MJA9VW  sky130_fd_pr__cap_mim_m3_2_MJA9VW_4
-timestamp 1713523187
+timestamp 1713523920
 transform 0 1 13657 -1 0 -8384
-box 0 0 1 1
+box -2849 -2581 2871 2581
 use sky130_fd_pr__cap_mim_m3_2_MJA9VW  sky130_fd_pr__cap_mim_m3_2_MJA9VW_5
-timestamp 1713523187
+timestamp 1713523920
 transform 0 -1 39699 1 0 -14601
-box 0 0 1 1
+box -2849 -2581 2871 2581
 use sky130_fd_pr__cap_mim_m3_2_MJA9VW  sky130_fd_pr__cap_mim_m3_2_MJA9VW_6
-timestamp 1713523187
+timestamp 1713523920
 transform 0 -1 13659 1 0 -2557
-box 0 0 1 1
+box -2849 -2581 2871 2581
 use sky130_fd_pr__cap_mim_m3_2_MJA9VW  sky130_fd_pr__cap_mim_m3_2_MJA9VW_7
-timestamp 1713523187
+timestamp 1713523920
 transform 0 1 13681 -1 0 3505
-box 0 0 1 1
+box -2849 -2581 2871 2581
 use sky130_fd_pr__cap_mim_m3_2_MJA9VW  sky130_fd_pr__cap_mim_m3_2_MJA9VW_8
-timestamp 1713523187
+timestamp 1713523920
 transform 0 -1 8145 1 0 -14529
-box 0 0 1 1
+box -2849 -2581 2871 2581
 use sky130_fd_pr__cap_mim_m3_2_MJA9VW  sky130_fd_pr__cap_mim_m3_2_MJA9VW_9
-timestamp 1713523187
+timestamp 1713523920
 transform 0 -1 2611 1 0 -14545
-box 0 0 1 1
+box -2849 -2581 2871 2581
 use sky130_fd_pr__cap_mim_m3_2_MJA9VW  sky130_fd_pr__cap_mim_m3_2_MJA9VW_10
-timestamp 1713523187
+timestamp 1713523920
 transform 0 1 8153 -1 0 -8385
-box 0 0 1 1
+box -2849 -2581 2871 2581
 use sky130_fd_pr__cap_mim_m3_2_MJA9VW  sky130_fd_pr__cap_mim_m3_2_MJA9VW_11
-timestamp 1713523187
+timestamp 1713523920
 transform 0 1 2593 -1 0 -8392
-box 0 0 1 1
+box -2849 -2581 2871 2581
 use sky130_fd_pr__cap_mim_m3_2_MJA9VW  sky130_fd_pr__cap_mim_m3_2_MJA9VW_12
-timestamp 1713523187
+timestamp 1713523920
 transform 0 -1 8091 1 0 -2545
-box 0 0 1 1
+box -2849 -2581 2871 2581
 use sky130_fd_pr__cap_mim_m3_2_MJA9VW  sky130_fd_pr__cap_mim_m3_2_MJA9VW_13
-timestamp 1713523187
+timestamp 1713523920
 transform 0 1 8105 -1 0 3519
-box 0 0 1 1
+box -2849 -2581 2871 2581
 use sky130_fd_pr__cap_mim_m3_2_MJA9VW  sky130_fd_pr__cap_mim_m3_2_MJA9VW_14
-timestamp 1713523187
+timestamp 1713523920
 transform 0 1 2617 -1 0 3513
-box 0 0 1 1
+box -2849 -2581 2871 2581
 use sky130_fd_pr__cap_mim_m3_2_MJA9VW  sky130_fd_pr__cap_mim_m3_2_MJA9VW_15
-timestamp 1713523187
+timestamp 1713523920
 transform 0 -1 2595 1 0 -2549
-box 0 0 1 1
+box -2849 -2581 2871 2581
 use sky130_fd_pr__cap_mim_m3_2_MJA9VW  sky130_fd_pr__cap_mim_m3_2_MJA9VW_16
-timestamp 1713523187
+timestamp 1713523920
 transform 0 1 45193 -1 0 3547
-box 0 0 1 1
+box -2849 -2581 2871 2581
 use sky130_fd_pr__cap_mim_m3_2_MJA9VW  sky130_fd_pr__cap_mim_m3_2_MJA9VW_17
-timestamp 1713523187
+timestamp 1713523920
 transform 0 1 39705 -1 0 3541
-box 0 0 1 1
+box -2849 -2581 2871 2581
 use sky130_fd_pr__cap_mim_m3_2_MJA9VW  sky130_fd_pr__cap_mim_m3_2_MJA9VW_18
-timestamp 1713523187
+timestamp 1713523920
 transform 0 1 34129 -1 0 3531
-box 0 0 1 1
+box -2849 -2581 2871 2581
 use sky130_fd_pr__cap_mim_m3_2_MJA9VW  sky130_fd_pr__cap_mim_m3_2_MJA9VW_19
-timestamp 1713523187
+timestamp 1713523920
 transform 0 1 28641 -1 0 3525
-box 0 0 1 1
+box -2849 -2581 2871 2581
 use sky130_fd_pr__cap_mim_m3_2_MJA9VW  sky130_fd_pr__cap_mim_m3_2_MJA9VW_20
-timestamp 1713523187
+timestamp 1713523920
 transform 0 -1 45179 1 0 -2517
-box 0 0 1 1
+box -2849 -2581 2871 2581
 use sky130_fd_pr__cap_mim_m3_2_MJA9VW  sky130_fd_pr__cap_mim_m3_2_MJA9VW_21
-timestamp 1713523187
+timestamp 1713523920
 transform 0 -1 39683 1 0 -2521
-box 0 0 1 1
+box -2849 -2581 2871 2581
 use sky130_fd_pr__cap_mim_m3_2_MJA9VW  sky130_fd_pr__cap_mim_m3_2_MJA9VW_22
-timestamp 1713523187
+timestamp 1713523920
 transform 0 -1 34115 1 0 -2533
-box 0 0 1 1
+box -2849 -2581 2871 2581
 use sky130_fd_pr__cap_mim_m3_2_MJA9VW  sky130_fd_pr__cap_mim_m3_2_MJA9VW_23
-timestamp 1713523187
+timestamp 1713523920
 transform 0 -1 28619 1 0 -2537
-box 0 0 1 1
+box -2849 -2581 2871 2581
 use sky130_fd_pr__cap_mim_m3_2_MJA9VW  sky130_fd_pr__cap_mim_m3_2_MJA9VW_24
-timestamp 1713523187
+timestamp 1713523920
 transform 0 1 45241 -1 0 -8511
-box 0 0 1 1
+box -2849 -2581 2871 2581
 use sky130_fd_pr__cap_mim_m3_2_MJA9VW  sky130_fd_pr__cap_mim_m3_2_MJA9VW_25
-timestamp 1713523187
+timestamp 1713523920
 transform 0 1 39681 -1 0 -8448
-box 0 0 1 1
+box -2849 -2581 2871 2581
 use sky130_fd_pr__cap_mim_m3_2_MJA9VW  sky130_fd_pr__cap_mim_m3_2_MJA9VW_26
-timestamp 1713523187
+timestamp 1713523920
 transform 0 1 28617 -1 0 -8380
-box 0 0 1 1
+box -2849 -2581 2871 2581
 use sky130_fd_pr__cap_mim_m3_2_MJA9VW  sky130_fd_pr__cap_mim_m3_2_MJA9VW_27
-timestamp 1713523187
+timestamp 1713523920
 transform 0 1 34177 -1 0 -8443
-box 0 0 1 1
+box -2849 -2581 2871 2581
 use sky130_fd_pr__cap_mim_m3_2_MJA9VW  sky130_fd_pr__cap_mim_m3_2_MJA9VW_28
-timestamp 1713523187
+timestamp 1713523920
 transform 0 -1 28635 1 0 -14533
-box 0 0 1 1
+box -2849 -2581 2871 2581
 use sky130_fd_pr__cap_mim_m3_2_MJA9VW  sky130_fd_pr__cap_mim_m3_2_MJA9VW_29
-timestamp 1713523187
+timestamp 1713523920
 transform 0 -1 34131 1 0 -14517
-box 0 0 1 1
+box -2849 -2581 2871 2581
 use sky130_fd_pr__cap_mim_m3_2_MJA9VW  sky130_fd_pr__cap_mim_m3_2_MJA9VW_30
-timestamp 1713523187
+timestamp 1713523920
 transform 0 -1 13675 1 0 -14553
-box 0 0 1 1
+box -2849 -2581 2871 2581
 use sky130_fd_pr__cap_mim_m3_2_MJA9VW  sky130_fd_pr__cap_mim_m3_2_MJA9VW_31
-timestamp 1713523187
+timestamp 1713523920
 transform 0 -1 19171 1 0 -14519
-box 0 0 1 1
+box -2849 -2581 2871 2581
 << labels >>
 flabel locali 24108 3602 24124 3644 0 FreeSans 1600 0 0 0 Vin
-port 1 nsew
+port 2 nsew
 flabel locali 23962 2956 23978 2998 0 FreeSans 1600 0 0 0 VDD_1V8
 port 4 nsew
 flabel locali 24018 -13816 24034 -13774 0 FreeSans 1600 0 0 0 VSS
 port 5 nsew
 flabel locali 23816 -15746 23832 -15704 0 FreeSans 1600 0 0 0 RST
 port 3 nsew
-flabel metal1 23946 4118 23962 4160 0 FreeSans 1600 0 0 0 Vout
+flabel metal5 23954 5260 24025 5331 0 FreeSans 1600 0 0 0 Vout
 port 1 nsew
 << end >>

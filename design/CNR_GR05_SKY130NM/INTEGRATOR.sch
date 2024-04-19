@@ -39,7 +39,7 @@ N 640 -580 640 -420 {
 lab=VDD_1V8}
 N 560 -580 640 -580 {
 lab=VDD_1V8}
-C {sky130_fd_pr/cap_mim_m3_2.sym} 610 -250 0 0 {name=C3 model=cap_mim_m3_2 W=100 L=100 MF=2 spiceprefix=X}
+C {sky130_fd_pr/cap_mim_m3_2.sym} 610 -250 0 0 {name=C3 model=cap_mim_m3_2 W=25 L=25 MF=32 spiceprefix=X}
 C {CNR_ATR_SKY130NM/CNRATR_PCH_2C1F2.sym} 570 -420 0 0 {name=x12 }
 C {CNR_ATR_SKY130NM/CNRATR_NCH_12C1F2.sym} 780 -250 0 1 {name=x14 }
 C {devices/opin.sym} 740 -340 0 0 {name=p1 lab=Vout}
