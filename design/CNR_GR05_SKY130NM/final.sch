@@ -9,8 +9,6 @@ N -210 -20 -170 -20 {
 lab=#net1}
 N -510 -40 -170 -40 {
 lab=VDD_1V8}
-N -510 -40 -510 -20 {
-lab=VDD_1V8}
 N -520 -20 -510 -20 {
 lab=VDD_1V8}
 N -580 -20 -520 -20 {
@@ -107,6 +105,29 @@ N 950 -80 950 500 {
 lab=#net8}
 N 840 -80 950 -80 {
 lab=#net8}
+N -530 -40 -510 -40 {
+lab=VDD_1V8}
+N -530 -40 -530 -20 {
+lab=VDD_1V8}
+N -240 -370 -240 -40 {
+lab=VDD_1V8}
+N -240 -370 410 -370 {
+lab=VDD_1V8}
+N 410 -370 410 -360 {
+lab=VDD_1V8}
+N -560 -180 410 -180 {
+lab=VDD_1V8}
+N 410 -280 410 -260 {
+lab=#net7}
+N 410 -270 530 -270 {
+lab=#net7}
+N 530 -270 530 -230 {
+lab=#net7}
+N 390 -320 390 -180 {
+lab=VDD_1V8}
+N -770 -180 -560 -180 {}
+N -770 -180 -770 100 {}
+N -770 100 -560 100 {}
 C {CNR_GR05_SKY130NM/PTAT.sym} -20 -20 0 0 {name=x1}
 C {CNR_GR05_SKY130NM/IREF.sym} -360 -10 0 0 {name=x2}
 C {devices/ipin.sym} -580 -20 0 0 {name=p1 lab=VDD_1V8}
@@ -117,3 +138,5 @@ C {CNR_GR05_SKY130NM/POSEDGE.sym} -330 320 0 0 {name=x5}
 C {CNR_GR05_SKY130NM/POSEDGE.sym} -330 410 0 0 {name=x6}
 C {devices/ipin.sym} -600 320 0 0 {name=p3 lab=VPWR_UP}
 C {CNR_GR05_SKY130NM/OTA.sym} 690 -40 0 0 {name=x7}
+C {SUN_TR_SKY130NM/SUNTR_RPPO2.sym} 410 -360 1 0 {name=x8 }
+C {SUN_TR_SKY130NM/SUNTR_RPPO4.sym} 410 -260 1 0 {name=x9 }
