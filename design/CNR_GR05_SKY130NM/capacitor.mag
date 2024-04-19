@@ -1,0 +1,13 @@
+magic
+tech sky130B
+magscale 1 2
+timestamp 1713518976
+<< error_p >>
+rect 96 440 464 464
+rect 96 120 120 440
+rect 96 96 464 120
+use sky130_fd_pr__cap_mim_m3_2_456XBF  sky130_fd_pr__cap_mim_m3_2_456XBF_0
+timestamp 1713518976
+transform 1 0 549 0 1 280
+box -549 -281 571 281
+<< end >>

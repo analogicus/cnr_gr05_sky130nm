@@ -1,6 +1,6 @@
 magic
 tech sky130B
-timestamp 1713364067
+timestamp 1713513383
 << locali >>
 rect -340 503 1484 523
 rect -340 473 271 503
@@ -31,11 +31,7 @@ rect 390 -1735 410 -1070
 rect 746 -1735 766 -1070
 rect 390 -1742 766 -1735
 rect 409 -1831 747 -1742
-rect -389 -4422 1712 -4382
-rect -390 -4494 1712 -4422
-rect -389 -4531 1712 -4494
-rect -111 -7065 -1 -6766
-rect -391 -7216 1709 -7065
+rect 206 -2239 316 -1852
 << viali >>
 rect 271 473 301 503
 rect 847 476 873 502
@@ -61,9 +57,9 @@ rect 563 -1199 593 -1169
 rect 560 -1332 596 -1296
 rect 563 -1550 595 -1518
 rect 566 -1707 592 -1681
-rect -62 -2166 -38 -2142
-rect -109 -4127 1 -4017
-rect -106 -4893 -2 -4789
+rect 864 -2193 888 -2169
+rect 206 -4118 316 -4008
+rect 825 -4115 929 -4011
 << metal1 >>
 rect 268 503 304 509
 rect 268 473 271 503
@@ -169,20 +165,19 @@ rect 563 -1681 595 -1553
 rect 563 -1707 566 -1681
 rect 592 -1707 595 -1681
 rect 563 -1713 595 -1707
-rect 1122 -1900 1152 -409
-rect -65 -1930 1152 -1900
-rect -65 -2142 -35 -1930
-rect -65 -2166 -62 -2142
-rect -38 -2166 -35 -2142
-rect -65 -2172 -35 -2166
-rect -115 -4017 7 -4014
-rect -115 -4127 -109 -4017
-rect 1 -4127 7 -4017
-rect -115 -4130 7 -4127
-rect -109 -4789 1 -4130
-rect -109 -4893 -106 -4789
-rect -2 -4893 1 -4789
-rect -109 -4899 1 -4893
+rect 1122 -2011 1152 -409
+rect 861 -2041 1152 -2011
+rect 861 -2169 891 -2041
+rect 861 -2193 864 -2169
+rect 888 -2193 891 -2169
+rect 861 -2199 891 -2193
+rect 203 -4008 319 -4002
+rect 203 -4118 206 -4008
+rect 316 -4011 935 -4008
+rect 316 -4115 825 -4011
+rect 929 -4115 935 -4011
+rect 316 -4118 935 -4115
+rect 203 -4124 319 -4118
 << via1 >>
 rect 454 358 490 394
 rect 554 -405 590 -369
@@ -219,17 +214,17 @@ transform 1 0 -292 0 1 7
 box -92 -62 956 508
 use SUNTR_RPPO8  SUNTR_RPPO8_0 ~/aicex/ip/sun_tr_sky130nm/design/SUN_TR_SKY130NM
 timestamp 1713363649
-transform 0 -1 1720 1 0 -7112
+transform 0 -1 2651 1 0 -4453
 box 0 0 2632 2118
 use SUNTR_RPPO8  SUNTR_RPPO8_1
 timestamp 1713363649
-transform 0 -1 1720 1 0 -4435
+transform 0 1 -1513 -1 0 -1821
 box 0 0 2632 2118
 << labels >>
 flabel metal1 559 -249 594 -232 0 FreeSans 100 0 0 0 Vref
-port 2 nsew
+port 3 nsew
 flabel locali -214 486 -179 503 0 FreeSans 400 0 0 0 VDD_1V8
-port 4 nsew
-flabel locali -49 -7185 -14 -7168 0 FreeSans 400 0 0 0 VSS
-port 6 nsew
+port 1 nsew
+flabel locali 533 -1809 632 -1766 0 FreeSans 800 0 0 0 VSS
+port 2 nsew
 << end >>
