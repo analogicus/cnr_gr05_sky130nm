@@ -7,7 +7,6 @@ output_*/
 work/
 .DS_store
 *.so
-*.pdf
 *.gds
 .cache
 .local/
