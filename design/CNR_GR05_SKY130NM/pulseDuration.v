@@ -1,4 +1,4 @@
-module PulseDurationMeasurement(
+temp_conversionmodule PulseDurationMeasurement(
     input wire clk,         // Clock input
     input wire reset_n,     // Reset input (active low)
     input wire signal_in,   // Input signal to measure

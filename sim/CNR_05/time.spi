@@ -42,11 +42,8 @@ VCLK VCLK 0 PULSE(0 1.8 0 1n 1n 12.5n 25n)
 .include ../xdut.spi
 
 adut [VCLK VPWR_UP VB] [~D12 ~D11 ~D10 ~D9 ~D8 ~D7 ~D6 ~D5 ~D4 ~D3 ~D2 ~D1 ~D0] null vdut
-*adut [clk reset_n signal_in] [~D7 ~D6 ~D5 ~D4 ~D3 ~D2 ~D1 ~D0] null vdut
-*.model vdut d_cosim simulation="./../pulseDuration.so" 
 
 
-*adut [VCLK VA VB] null null vdut
 .model vdut d_cosim simulation="./../verilog_include_file.so" 
 
 
@@ -80,7 +77,7 @@ adut [VCLK VPWR_UP VB] [~D12 ~D11 ~D10 ~D9 ~D8 ~D7 ~D6 ~D5 ~D4 ~D3 ~D2 ~D1 ~D0] 
 .save v(d12)
 .save v(xdut.vout)  
 #endif
-*.save all
+.save all
 *----------------------------------------------------------------
 * NGSPICE control
 *----------------------------------------------------------------
