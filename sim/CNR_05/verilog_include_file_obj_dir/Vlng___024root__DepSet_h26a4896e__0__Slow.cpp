@@ -8,7 +8,7 @@
 VL_ATTR_COLD void Vlng___024root___eval_static__TOP(Vlng___024root* vlSelf);
 
 VL_ATTR_COLD void Vlng___024root___eval_static(Vlng___024root* vlSelf) {
-    if (false && vlSelf) {}  // Prevent unused
+    (void)vlSelf;  // Prevent unused variable warning
     Vlng__Syms* const __restrict vlSymsp VL_ATTR_UNUSED = vlSelf->vlSymsp;
     VL_DEBUG_IF(VL_DBG_MSGF("+    Vlng___024root___eval_static\n"); );
     // Body
@@ -16,7 +16,7 @@ VL_ATTR_COLD void Vlng___024root___eval_static(Vlng___024root* vlSelf) {
 }
 
 VL_ATTR_COLD void Vlng___024root___eval_static__TOP(Vlng___024root* vlSelf) {
-    if (false && vlSelf) {}  // Prevent unused
+    (void)vlSelf;  // Prevent unused variable warning
     Vlng__Syms* const __restrict vlSymsp VL_ATTR_UNUSED = vlSelf->vlSymsp;
     VL_DEBUG_IF(VL_DBG_MSGF("+    Vlng___024root___eval_static__TOP\n"); );
     // Body
@@ -25,7 +25,7 @@ VL_ATTR_COLD void Vlng___024root___eval_static__TOP(Vlng___024root* vlSelf) {
 }
 
 VL_ATTR_COLD void Vlng___024root___eval_initial(Vlng___024root* vlSelf) {
-    if (false && vlSelf) {}  // Prevent unused
+    (void)vlSelf;  // Prevent unused variable warning
     Vlng__Syms* const __restrict vlSymsp VL_ATTR_UNUSED = vlSelf->vlSymsp;
     VL_DEBUG_IF(VL_DBG_MSGF("+    Vlng___024root___eval_initial\n"); );
     // Body
@@ -33,7 +33,7 @@ VL_ATTR_COLD void Vlng___024root___eval_initial(Vlng___024root* vlSelf) {
 }
 
 VL_ATTR_COLD void Vlng___024root___eval_final(Vlng___024root* vlSelf) {
-    if (false && vlSelf) {}  // Prevent unused
+    (void)vlSelf;  // Prevent unused variable warning
     Vlng__Syms* const __restrict vlSymsp VL_ATTR_UNUSED = vlSelf->vlSymsp;
     VL_DEBUG_IF(VL_DBG_MSGF("+    Vlng___024root___eval_final\n"); );
 }
@@ -44,7 +44,7 @@ VL_ATTR_COLD void Vlng___024root___dump_triggers__stl(Vlng___024root* vlSelf);
 VL_ATTR_COLD bool Vlng___024root___eval_phase__stl(Vlng___024root* vlSelf);
 
 VL_ATTR_COLD void Vlng___024root___eval_settle(Vlng___024root* vlSelf) {
-    if (false && vlSelf) {}  // Prevent unused
+    (void)vlSelf;  // Prevent unused variable warning
     Vlng__Syms* const __restrict vlSymsp VL_ATTR_UNUSED = vlSelf->vlSymsp;
     VL_DEBUG_IF(VL_DBG_MSGF("+    Vlng___024root___eval_settle\n"); );
     // Init
@@ -59,7 +59,7 @@ VL_ATTR_COLD void Vlng___024root___eval_settle(Vlng___024root* vlSelf) {
 #ifdef VL_DEBUG
             Vlng___024root___dump_triggers__stl(vlSelf);
 #endif
-            VL_FATAL_MT("../../design/CNR_GR05_SKY130NM/verilog_include_file.v", 1, "", "Settle region did not converge.");
+            VL_FATAL_MT("../../design/CNR_GR05_SKY130NM/verilog_include_file.v", 9, "", "Settle region did not converge.");
         }
         __VstlIterCount = ((IData)(1U) + __VstlIterCount);
         __VstlContinue = 0U;
@@ -72,7 +72,7 @@ VL_ATTR_COLD void Vlng___024root___eval_settle(Vlng___024root* vlSelf) {
 
 #ifdef VL_DEBUG
 VL_ATTR_COLD void Vlng___024root___dump_triggers__stl(Vlng___024root* vlSelf) {
-    if (false && vlSelf) {}  // Prevent unused
+    (void)vlSelf;  // Prevent unused variable warning
     Vlng__Syms* const __restrict vlSymsp VL_ATTR_UNUSED = vlSelf->vlSymsp;
     VL_DEBUG_IF(VL_DBG_MSGF("+    Vlng___024root___dump_triggers__stl\n"); );
     // Body
@@ -86,7 +86,7 @@ VL_ATTR_COLD void Vlng___024root___dump_triggers__stl(Vlng___024root* vlSelf) {
 #endif  // VL_DEBUG
 
 VL_ATTR_COLD void Vlng___024root___stl_sequent__TOP__0(Vlng___024root* vlSelf) {
-    if (false && vlSelf) {}  // Prevent unused
+    (void)vlSelf;  // Prevent unused variable warning
     Vlng__Syms* const __restrict vlSymsp VL_ATTR_UNUSED = vlSelf->vlSymsp;
     VL_DEBUG_IF(VL_DBG_MSGF("+    Vlng___024root___stl_sequent__TOP__0\n"); );
     // Init
@@ -118,7 +118,7 @@ VL_ATTR_COLD void Vlng___024root___stl_sequent__TOP__0(Vlng___024root* vlSelf) {
 }
 
 VL_ATTR_COLD void Vlng___024root___eval_stl(Vlng___024root* vlSelf) {
-    if (false && vlSelf) {}  // Prevent unused
+    (void)vlSelf;  // Prevent unused variable warning
     Vlng__Syms* const __restrict vlSymsp VL_ATTR_UNUSED = vlSelf->vlSymsp;
     VL_DEBUG_IF(VL_DBG_MSGF("+    Vlng___024root___eval_stl\n"); );
     // Body
@@ -130,7 +130,7 @@ VL_ATTR_COLD void Vlng___024root___eval_stl(Vlng___024root* vlSelf) {
 VL_ATTR_COLD void Vlng___024root___eval_triggers__stl(Vlng___024root* vlSelf);
 
 VL_ATTR_COLD bool Vlng___024root___eval_phase__stl(Vlng___024root* vlSelf) {
-    if (false && vlSelf) {}  // Prevent unused
+    (void)vlSelf;  // Prevent unused variable warning
     Vlng__Syms* const __restrict vlSymsp VL_ATTR_UNUSED = vlSelf->vlSymsp;
     VL_DEBUG_IF(VL_DBG_MSGF("+    Vlng___024root___eval_phase__stl\n"); );
     // Init
@@ -146,7 +146,7 @@ VL_ATTR_COLD bool Vlng___024root___eval_phase__stl(Vlng___024root* vlSelf) {
 
 #ifdef VL_DEBUG
 VL_ATTR_COLD void Vlng___024root___dump_triggers__act(Vlng___024root* vlSelf) {
-    if (false && vlSelf) {}  // Prevent unused
+    (void)vlSelf;  // Prevent unused variable warning
     Vlng__Syms* const __restrict vlSymsp VL_ATTR_UNUSED = vlSelf->vlSymsp;
     VL_DEBUG_IF(VL_DBG_MSGF("+    Vlng___024root___dump_triggers__act\n"); );
     // Body
@@ -161,7 +161,7 @@ VL_ATTR_COLD void Vlng___024root___dump_triggers__act(Vlng___024root* vlSelf) {
 
 #ifdef VL_DEBUG
 VL_ATTR_COLD void Vlng___024root___dump_triggers__nba(Vlng___024root* vlSelf) {
-    if (false && vlSelf) {}  // Prevent unused
+    (void)vlSelf;  // Prevent unused variable warning
     Vlng__Syms* const __restrict vlSymsp VL_ATTR_UNUSED = vlSelf->vlSymsp;
     VL_DEBUG_IF(VL_DBG_MSGF("+    Vlng___024root___dump_triggers__nba\n"); );
     // Body
@@ -175,7 +175,7 @@ VL_ATTR_COLD void Vlng___024root___dump_triggers__nba(Vlng___024root* vlSelf) {
 #endif  // VL_DEBUG
 
 VL_ATTR_COLD void Vlng___024root___ctor_var_reset(Vlng___024root* vlSelf) {
-    if (false && vlSelf) {}  // Prevent unused
+    (void)vlSelf;  // Prevent unused variable warning
     Vlng__Syms* const __restrict vlSymsp VL_ATTR_UNUSED = vlSelf->vlSymsp;
     VL_DEBUG_IF(VL_DBG_MSGF("+    Vlng___024root___ctor_var_reset\n"); );
     // Body

@@ -5,7 +5,7 @@
 #ifdef Lay
 .include ../../../work/lpe/CNR_05_lpe.spi
 #else
-.include ../../../work/xsch/CNR_GR05.spice
+.include ../../../work/xsch/final.spice
 #endif
 
 *-----------------------------------------------------------------
@@ -25,7 +25,7 @@
 *-----------------------------------------------------------------
 VSS  VSS  0 dc 0
 VDD_1V8  VDD_1V8  0 dc 1.8 
-Vthreshold  Vthreshold  0 dc 1.3
+*Vthreshold  Vthreshold  0 dc 1.3
 VPWR_UP VPWR_UP 0 PULSE(0 1.8 10n 1n 1n 10000n 10000n)
 
 
@@ -40,7 +40,8 @@ VCLK VCLK 0 PULSE(0 1.8 0 1n 1n 12.5n 25n)
 * DUT
 *-----------------------------------------------------------------
 .include ../xdut.spi
-adut [VCLK VPWR_UP VB] [~D8 ~D7 ~D6 ~D5 ~D4 ~D3 ~D2 ~D1 ~D0] null vdut
+
+adut [VCLK VPWR_UP pulse] [~D8 ~D7 ~D6 ~D5 ~D4 ~D3 ~D2 ~D1 ~D0] null vdut
 .model vdut d_cosim simulation="./../verilog_include_file.so" 
 
 
@@ -71,7 +72,7 @@ unset askquit
 optran 1 1 1 100n 2u 0
 
 
-foreach vtemp 25 30 35 40 45 50 55 60 65 70 75 80 85 90 95 100 105 110 115 120 125
+foreach vtemp -40 -20 0 20 40 80 120
   option temp=$vtemp
   tran 10n 150u 1n uic
   write {cicname}_($vtemp).raw
