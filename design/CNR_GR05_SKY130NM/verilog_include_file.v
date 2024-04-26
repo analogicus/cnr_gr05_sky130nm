@@ -1,5 +1,5 @@
 // Macros
-`define STA         0       // Status register          0x00    RO
+`define STA         0       // Status register          0x00    RO WIP
 `define TMPH        1       // Temperature high byte    0x01    RO  
 `define TMPL        2       // Temperature low byte     0x02    RO
 `define RAWH        3       // Raw data high byte       0x03    RO
@@ -7,26 +7,18 @@
 `define CTL         5       // Control register         0x05    RW
 `define RES1        6       // Reserved                 0x06    RW
 `define RES2        7       // Reserved                 0x07    RW
-`define OFS_3       8       // Offset register 3        0x08    RW
-`define OFS_2       9       // Offset register 2        0x09    RW
-`define OFS_1       10      // Offset register 1        0x0A    RW
-`define OFS_0       11      // Offset register 0        0x0B    RW
-`define OFS_SHA     12      // Offset Shift amount reg  0x0C    RW
-`define GAIN1_3     13      // Gain1 register 3         0x0D    RW
-`define GAIN1_2     14      // Gain1 register 2         0x0E    RW
-`define GAIN1_1     15      // Gain1 register 1         0x0F    RW
-`define GAIN1_0     16      // Gain1 register 0         0x10    RW
-`define GAIN1_SHA   17      // Gain1 shift amount reg   0x11    RW
-`define GAIN2_3     18      // Gain2 register 3         0x12    RW
-`define GAIN2_2     19      // Gain2 register 2         0x13    RW
-`define GAIN2_1     20      // Gain2 register 1         0x14    RW
-`define GAIN2_0     21      // Gain2 register 0         0x15    RW
-`define GAIN2_SHA   22      // Gain2 shift amount reg   0x16    RW
-`define GAIN3_3     23      // Gain3 register 3         0x17    RW
-`define GAIN3_2     24      // Gain3 register 2         0x18    RW
-`define GAIN3_1     25      // Gain3 register 1         0x19    RW
-`define GAIN3_0     26      // Gain3 register 0         0x1A    RW
-`define GAIN3_SHA   27      // Gain3 shift amount reg   0x1B    RW
+`define OFS_1       8       // Offset register 1        0x08    RW
+`define OFS_0       9       // Offset register 0        0x09    RW
+`define OFS_SHA     10      // Offset Shift amount reg  0x0A    RW
+`define GAIN1_1     11      // Gain1 register 1         0x0B    RW
+`define GAIN1_0     12      // Gain1 register 0         0x0C    RW
+`define GAIN1_SHA   13      // Gain1 shift amount reg   0x0D    RW
+`define GAIN2_1     14      // Gain2 register 1         0x0E    RW
+`define GAIN2_0     15      // Gain2 register 0         0x0F    RW
+`define GAIN2_SHA   16      // Gain2 shift amount reg   0x10    RW
+`define GAIN3_1     17      // Gain3 register 1         0x11    RW
+`define GAIN3_0     18      // Gain3 register 0         0x12    RW
+`define GAIN3_SHA   19      // Gain3 shift amount reg   0x13    RW
 
 
 
@@ -86,7 +78,6 @@ always_ff @(posedge clk) begin
             end
         end
         else if(RS == 1 && RW == 1) begin   // Write data
-        // TODO: Write protection for read-only registers
             if(address >= 5 && address <= 30) begin
                 data_reg[address] = data_in;
                 //$display($stime,"\t\t\t\t\tWriting data %d to address %d", data_in, address);
