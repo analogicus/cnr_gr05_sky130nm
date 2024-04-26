@@ -6,13 +6,13 @@
 #include "Vlng___024root.h"
 
 void Vlng___024root___eval_act(Vlng___024root* vlSelf) {
-    if (false && vlSelf) {}  // Prevent unused
+    (void)vlSelf;  // Prevent unused variable warning
     Vlng__Syms* const __restrict vlSymsp VL_ATTR_UNUSED = vlSelf->vlSymsp;
     VL_DEBUG_IF(VL_DBG_MSGF("+    Vlng___024root___eval_act\n"); );
 }
 
 VL_INLINE_OPT void Vlng___024root___nba_sequent__TOP__0(Vlng___024root* vlSelf) {
-    if (false && vlSelf) {}  // Prevent unused
+    (void)vlSelf;  // Prevent unused variable warning
     Vlng__Syms* const __restrict vlSymsp VL_ATTR_UNUSED = vlSelf->vlSymsp;
     VL_DEBUG_IF(VL_DBG_MSGF("+    Vlng___024root___nba_sequent__TOP__0\n"); );
     // Init
@@ -27,15 +27,15 @@ VL_INLINE_OPT void Vlng___024root___nba_sequent__TOP__0(Vlng___024root* vlSelf) 
             vlSelf->PulseDurationMeasurement__DOT__count = 1U;
             if (VL_UNLIKELY((1U & (~ (IData)(vlSelf->signal_in))))) {
                 vlSelf->PulseDurationMeasurement__DOT__state = 1U;
-                VL_WRITEF("\t\t\t\t\tMeasurement finished \t\t Measured temperature: %4d\n",
-                          9,vlSelf->temperature_output);
+                VL_WRITEF_NX("\t\t\t\t\tMeasurement finished \t\t Measured temperature: %4d\n",0,
+                             9,vlSelf->temperature_output);
             }
         } else if ((1U == (IData)(vlSelf->PulseDurationMeasurement__DOT__state))) {
             if (VL_UNLIKELY(vlSelf->signal_in)) {
                 vlSelf->PulseDurationMeasurement__DOT__pulse_duration 
                     = vlSelf->PulseDurationMeasurement__DOT__count;
-                VL_WRITEF("\t\t\t\t\tCount finished \t\t Pulse Duration: %4#\n",
-                          12,vlSelf->PulseDurationMeasurement__DOT__pulse_duration);
+                VL_WRITEF_NX("\t\t\t\t\tCount finished \t\t Pulse Duration: %4#\n",0,
+                             12,vlSelf->PulseDurationMeasurement__DOT__pulse_duration);
                 vlSelf->PulseDurationMeasurement__DOT__state = 0U;
             } else {
                 vlSelf->PulseDurationMeasurement__DOT__count 
@@ -45,7 +45,7 @@ VL_INLINE_OPT void Vlng___024root___nba_sequent__TOP__0(Vlng___024root* vlSelf) 
             vlSelf->PulseDurationMeasurement__DOT__state = 0U;
         }
     } else {
-        VL_WRITEF("\tReset\n");
+        VL_WRITEF_NX("\tReset\n",0);
         vlSelf->PulseDurationMeasurement__DOT__state = 0U;
         vlSelf->PulseDurationMeasurement__DOT__count = 0U;
         vlSelf->PulseDurationMeasurement__DOT__pulse_duration = 0U;
@@ -75,7 +75,7 @@ VL_INLINE_OPT void Vlng___024root___nba_sequent__TOP__0(Vlng___024root* vlSelf) 
 }
 
 void Vlng___024root___eval_nba(Vlng___024root* vlSelf) {
-    if (false && vlSelf) {}  // Prevent unused
+    (void)vlSelf;  // Prevent unused variable warning
     Vlng__Syms* const __restrict vlSymsp VL_ATTR_UNUSED = vlSelf->vlSymsp;
     VL_DEBUG_IF(VL_DBG_MSGF("+    Vlng___024root___eval_nba\n"); );
     // Body
@@ -87,7 +87,7 @@ void Vlng___024root___eval_nba(Vlng___024root* vlSelf) {
 void Vlng___024root___eval_triggers__act(Vlng___024root* vlSelf);
 
 bool Vlng___024root___eval_phase__act(Vlng___024root* vlSelf) {
-    if (false && vlSelf) {}  // Prevent unused
+    (void)vlSelf;  // Prevent unused variable warning
     Vlng__Syms* const __restrict vlSymsp VL_ATTR_UNUSED = vlSelf->vlSymsp;
     VL_DEBUG_IF(VL_DBG_MSGF("+    Vlng___024root___eval_phase__act\n"); );
     // Init
@@ -105,7 +105,7 @@ bool Vlng___024root___eval_phase__act(Vlng___024root* vlSelf) {
 }
 
 bool Vlng___024root___eval_phase__nba(Vlng___024root* vlSelf) {
-    if (false && vlSelf) {}  // Prevent unused
+    (void)vlSelf;  // Prevent unused variable warning
     Vlng__Syms* const __restrict vlSymsp VL_ATTR_UNUSED = vlSelf->vlSymsp;
     VL_DEBUG_IF(VL_DBG_MSGF("+    Vlng___024root___eval_phase__nba\n"); );
     // Init
@@ -127,7 +127,7 @@ VL_ATTR_COLD void Vlng___024root___dump_triggers__act(Vlng___024root* vlSelf);
 #endif  // VL_DEBUG
 
 void Vlng___024root___eval(Vlng___024root* vlSelf) {
-    if (false && vlSelf) {}  // Prevent unused
+    (void)vlSelf;  // Prevent unused variable warning
     Vlng__Syms* const __restrict vlSymsp VL_ATTR_UNUSED = vlSelf->vlSymsp;
     VL_DEBUG_IF(VL_DBG_MSGF("+    Vlng___024root___eval\n"); );
     // Init
@@ -141,7 +141,7 @@ void Vlng___024root___eval(Vlng___024root* vlSelf) {
 #ifdef VL_DEBUG
             Vlng___024root___dump_triggers__nba(vlSelf);
 #endif
-            VL_FATAL_MT("../../design/CNR_GR05_SKY130NM/verilog_include_file.v", 1, "", "NBA region did not converge.");
+            VL_FATAL_MT("../../design/CNR_GR05_SKY130NM/verilog_include_file.v", 9, "", "NBA region did not converge.");
         }
         __VnbaIterCount = ((IData)(1U) + __VnbaIterCount);
         __VnbaContinue = 0U;
@@ -152,7 +152,7 @@ void Vlng___024root___eval(Vlng___024root* vlSelf) {
 #ifdef VL_DEBUG
                 Vlng___024root___dump_triggers__act(vlSelf);
 #endif
-                VL_FATAL_MT("../../design/CNR_GR05_SKY130NM/verilog_include_file.v", 1, "", "Active region did not converge.");
+                VL_FATAL_MT("../../design/CNR_GR05_SKY130NM/verilog_include_file.v", 9, "", "Active region did not converge.");
             }
             vlSelf->__VactIterCount = ((IData)(1U) 
                                        + vlSelf->__VactIterCount);
@@ -169,7 +169,7 @@ void Vlng___024root___eval(Vlng___024root* vlSelf) {
 
 #ifdef VL_DEBUG
 void Vlng___024root___eval_debug_assertions(Vlng___024root* vlSelf) {
-    if (false && vlSelf) {}  // Prevent unused
+    (void)vlSelf;  // Prevent unused variable warning
     Vlng__Syms* const __restrict vlSymsp VL_ATTR_UNUSED = vlSelf->vlSymsp;
     VL_DEBUG_IF(VL_DBG_MSGF("+    Vlng___024root___eval_debug_assertions\n"); );
     // Body

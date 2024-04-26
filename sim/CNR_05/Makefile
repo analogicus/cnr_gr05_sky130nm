@@ -4,10 +4,10 @@ all: typical etc mc summary
 
 include ../../tech/make/sim.make
 
-TB=tran
+TB=time
 VIEW=Sch
 #VIEW=Lay
-CELL=CNR_GR05
+CELL=final
 LIB =CNR_GR05_SKY130NM
 OPT=
 

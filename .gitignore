@@ -5,7 +5,7 @@ output_*/
 verilog*/
 *.tcl
 *.log
-work/
+*work/
 .DS_store
 *.so
 *.pdf
@@ -13,7 +13,7 @@ work/
 .cache
 .local/
 build/
-work/lvs
-work/gds
-work/drc
-work/xsch
+*work/lvs
+*work/gds
+*work/drc
+*work/xsch
