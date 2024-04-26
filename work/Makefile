@@ -17,4 +17,4 @@ CELL=final
 #- Provide cells you want to check for the lvsall drcall commands
 CELLS = final
 
-include ../tech/make/core.make
+include ../tech/make/core.make 
