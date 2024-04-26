@@ -1,7 +1,7 @@
 magic
 tech sky130B
 magscale 1 2
-timestamp 1713520366
+timestamp 1714138487
 << pwell >>
 rect 1392 -9196 1394 -9004
 << locali >>
@@ -306,22 +306,22 @@ use INV  INV_5
 timestamp 1712998694
 transform 0 -1 4550 1 0 -6958
 box -184 -238 1340 4554
-use sky130_fd_pr__cap_mim_m3_2_2Z6F9E  sky130_fd_pr__cap_mim_m3_2_2Z6F9E_0
-timestamp 1713519443
-transform 1 0 -925 0 1 2033
-box -849 -1081 871 1081
-use sky130_fd_pr__cap_mim_m3_2_2Z6F9E  sky130_fd_pr__cap_mim_m3_2_2Z6F9E_2
-timestamp 1713519443
-transform -1 0 5723 0 -1 2013
-box -849 -1081 871 1081
-use sky130_fd_pr__cap_mim_m3_2_2Z6F9E  sky130_fd_pr__cap_mim_m3_2_2Z6F9E_3
-timestamp 1713519443
-transform 1 0 -1203 0 1 -4749
-box -849 -1081 871 1081
-use sky130_fd_pr__cap_mim_m3_2_2Z6F9E  sky130_fd_pr__cap_mim_m3_2_2Z6F9E_4
-timestamp 1713519443
-transform -1 0 6019 0 -1 -4725
-box -849 -1081 871 1081
+use sky130_fd_pr__cap_mim_m3_2_DF5RDQ  sky130_fd_pr__cap_mim_m3_2_DF5RDQ_0
+timestamp 1714138487
+transform 1 0 -1115 0 1 2023
+box -1049 -1081 1071 1081
+use sky130_fd_pr__cap_mim_m3_2_DF5RDQ  sky130_fd_pr__cap_mim_m3_2_DF5RDQ_1
+timestamp 1714138487
+transform 1 0 -1389 0 1 -4725
+box -1049 -1081 1071 1081
+use sky130_fd_pr__cap_mim_m3_2_DF5RDQ  sky130_fd_pr__cap_mim_m3_2_DF5RDQ_2
+timestamp 1714138487
+transform -1 0 6243 0 -1 -4765
+box -1049 -1081 1071 1081
+use sky130_fd_pr__cap_mim_m3_2_DF5RDQ  sky130_fd_pr__cap_mim_m3_2_DF5RDQ_3
+timestamp 1714138487
+transform -1 0 5917 0 -1 2025
+box -1049 -1081 1071 1081
 << labels >>
 flabel locali 2848 -13354 3075 -13247 0 FreeSans 1600 0 0 0 VSS
 port 1 nsew

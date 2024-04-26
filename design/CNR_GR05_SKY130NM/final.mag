@@ -2,6 +2,9 @@ magic
 tech sky130B
 magscale 1 2
 timestamp 1713537898
+<< checkpaint >>
+rect -10710 -9390 1540 9651
+rect 8326 -9184 20576 9857
 << locali >>
 rect 3998 30952 4710 30958
 rect 3998 30892 4004 30952
@@ -389,13 +392,13 @@ timestamp 1713364606
 transform -1 0 5164 0 -1 -10578
 box -920 -262 1344 3290
 use POSEDGE  POSEDGE_0
-timestamp 1713520366
+timestamp 1714138487
 transform -1 0 -2158 0 1 5275
-box -2052 -13405 6868 3116
+box -2438 -13405 7292 3116
 use POSEDGE  POSEDGE_1
-timestamp 1713520366
+timestamp 1714138487
 transform 1 0 12024 0 1 5481
-box -2052 -13405 6868 3116
+box -2438 -13405 7292 3116
 use PTAT  PTAT_0
 timestamp 1713537515
 transform 1 0 4270 0 1 180

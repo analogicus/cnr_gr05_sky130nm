@@ -83,8 +83,10 @@ N -650 -50 40 30 {
 lab=A}
 N -90 -120 140 -120 {
 lab=VDD_1V8}
-N -90 80 140 80 {}
-N 140 30 140 80 {}
+N -90 80 140 80 {
+lab=VSS}
+N 140 30 140 80 {
+lab=VSS}
 C {CNR_GR05_SKY130NM/AND.sym} 240 -40 0 0 {name=x12}
 C {CNR_GR05_SKY130NM/INV.sym} 410 -40 0 0 {name=x13}
 C {devices/opin.sym} 400 -40 0 0 {name=p4 lab=O
@@ -98,5 +100,5 @@ C {devices/ipin.sym} -620 80 0 0 {name=p22 lab=VSS}
 C {devices/ipin.sym} -660 -50 0 0 {name=p23 lab=A}
 C {CNR_GR05_SKY130NM/INV.sym} -100 -50 0 0 {name=x1}
 C {CNR_GR05_SKY130NM/INV.sym} 20 -50 0 0 {name=x2}
-C {sky130_fd_pr/cap_mim_m3_2.sym} -390 20 0 0 {name=C1 model=cap_mim_m3_2 W=5 L=10 MF=2 spiceprefix=X}
-C {sky130_fd_pr/cap_mim_m3_2.sym} -260 20 0 0 {name=C2 model=cap_mim_m3_2 W=5 L=10 MF=2 spiceprefix=X}
+C {sky130_fd_pr/cap_mim_m3_2.sym} -390 20 0 0 {name=C1 model=cap_mim_m3_2 W=7 L=10 MF=2 spiceprefix=X}
+C {sky130_fd_pr/cap_mim_m3_2.sym} -260 20 0 0 {name=C2 model=cap_mim_m3_2 W=7 L=10 MF=2 spiceprefix=X}
