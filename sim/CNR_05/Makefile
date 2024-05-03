@@ -4,10 +4,10 @@ all: typical etc mc summary
 
 include ../../tech/make/sim.make
 
-TB=tran
+TB=time
 VIEW=Sch
 #VIEW=Lay
-CELL=CNR_GR05
+CELL=final
 LIB =CNR_GR05_SKY130NM
 OPT=
 
@@ -41,11 +41,11 @@ ntc: netlist
 temp: netlist
 	cicsim run --name ${VIEW}_temp ${TB} ${OPT} ${VIEW} Gt "Ktt" "Tt,Th,Tl" Vt
 
-dut:
+dut: 
 	perl ../../tech/script/genxdut ../../work/xsch/${CELL}.spice ${CELL}
 
-combine:
-	python3 plot.py show_plots multi_plots .svg
+csv:
+	python3 raw2csv.py
 
 summary:
 	cicsim summary --output "README.md"
@@ -56,6 +56,15 @@ slide:
 plot:
 	python3 plot.py show_plots .svg
 
+combine:
+	python3 plot.py show_plots multi_plots .svg
+
+single:
+	python3 plot.py show_plots single_output multi_plots .svg
+
+verilog:
+	# This command is not implemented yet, use 'ngspice vlnggen <verilog_file>' instead
+
 
 clean:
 	-rm -rf output_*
@@ -65,3 +74,8 @@ clean:
 	-rm *.pdf
 	-rm *.csv
 	-rm *.svg
+	-rm *.so 
+	-rm -rf *obj_dir
+	-rm inouts.h
+	-rm inputs.h
+	-rm outputs.h

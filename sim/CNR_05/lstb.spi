@@ -1,0 +1,102 @@
+*----------------------------------------------------------------
+* Include
+*----------------------------------------------------------------
+
+#ifdef Lay
+.include ../../../work/lpe/CNR_05_lpe.spi
+#else
+.include ../../../work/xsch/CNR_GR05.spice
+#endif
+
+*-----------------------------------------------------------------
+* OPTIONS
+*-----------------------------------------------------------------
+.option reltol=1e-4 gmin=1e-15
+
+
+*-----------------------------------------------------------------
+* PARAMETERS
+*-----------------------------------------------------------------
+.param AVDD = {vdda}
+
+*-----------------------------------------------------------------
+* FORCE
+*-----------------------------------------------------------------
+VSS  VSS  0     dc 0
+VDD  VDD_1V8  0  dc {AVDD}
+
+
+*-----------------------------------------------------------------
+* Loop stability
+*-----------------------------------------------------------------
+.include ../../../../cpdk/ngspice/tian_subckt.lib
+X999 LPI LPO loopgainprobe
+
+*-----------------------------------------------------------------
+* DUT
+*-----------------------------------------------------------------
+*XDUT VDD_1V8 VSS PWRUP_1V8 LPI LPO
+*+ IBP_1U<3>,IBP_1U<2>,IBP_1U<1>,IBP_1U<0>  RPLY_BIAS
+.include ../xdut.spi
+*-----------------------------------------------------------------
+* STASH
+*-----------------------------------------------------------------
+V3 IBP_1U<3> 0 dc {AVDD/2}
+V2 IBP_1U<2> 0 dc {AVDD/2}
+V1 IBP_1U<1> 0 dc {AVDD/2}
+V0 IBP_1U<0> 0 dc {AVDD/2}
+
+
+*----------------------------------------------------------------
+* PROBE
+*----------------------------------------------------------------
+.save V(X999.x) I(v.X999.Vi)
+.save v(LPO) v(LPI) v(xdut.vr1) v(xdut.vd1) v(xdut.xota.vstart)
+.save v(AVDD)
+#ifdef Debug
+*.save all
+#else
+
+
+#endif
+
+*----------------------------------------------------------------
+* NGSPICE control
+*----------------------------------------------------------------
+.control
+set num_threads=8
+set color0=white
+set color1=black
+unset askquit
+
+optran 1 1 1 100n 4u 0
+op
+write {cicname}_op.raw
+
+*----------------------------------------------------------------
+* LSTB analysis
+*----------------------------------------------------------------
+* Set voltage AC to 1
+ac dec 50 100 10G
+
+* Set Current to 1
+alter i.X999.Ii acmag=1
+alter v.X999.Vi acmag=0
+ac dec 50 100 10G
+
+let lg_mag = db(tian_loop())
+let lg_phase = 180*cph(tian_loop())/pi
+
+set gnuplot_terminal=png/quit
+gnuplot {cicname}_loop_gain lg_mag
+gnuplot {cicname}_loop_phase lg_phase
+
+write
+
+#ifdef Debug
+*quit
+#else
+
+quit
+#endif
+.endc

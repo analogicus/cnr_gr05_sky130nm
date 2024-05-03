@@ -1,6 +1,0 @@
-corner:
-  Lay: ''
-  Sch: ''
-ngspice:
-  library: GOOD_OTA_SKY130NM
-  cell: GOOD_OTA
