@@ -9,10 +9,9 @@
 module PulseDurationMeasurement(
     input wire clk,                                 // Clock input
     input wire reset_n,                             // Reset input (active low)
-    input wire signal_in,                           // Input signal to measure
-    output reg signed [8:0] temperature_output = 0  // Signed temperature value output
-    
+    input wire signal_in                            // Input signal to measure
 );
+
 
 // Internal variables
 reg [1:0] state;
@@ -25,12 +24,21 @@ reg signed [8:0] temp_value1;
 parameter IDLE = 2'b00;
 parameter HIGH = 2'b01;
 
-// Constants for temperature conversion
-parameter GAIN3 = -0.0000004731;
-parameter GAIN2 = 0.0020044419;
-parameter GAIN = -2.4734734627;
-parameter OFFSET = 847.1700446582;
+// // Constants for temperature conversion
+// parameter GAIN3 = -0.0000004731;
+// parameter GAIN2 = 0.0020044419;
+// parameter GAIN = -2.4734734627;
+// parameter OFFSET = 847.1700446582;
 
+initial begin
+    $display("---------------------------------------------------------------------------");
+    $display("- Simplified Pulse Duration Measurement System for Temperature Conversion -");
+    $display("---------------------------------------------------------------------------");
+    $display("- This system measures the duration of a pulse signal and reports it      -");
+    $display("- Simplified to only clock counter module to make simulation easier       -");
+    $display("- For the full system, please see temperature_interface.v                 -");
+    $display("---------------------------------------------------------------------------");
+end
 
 // State machine for the counter
 always_ff @(posedge clk) begin
@@ -45,7 +53,6 @@ always_ff @(posedge clk) begin
                 count = 12'b000000000001;
                 if (signal_in == 0) begin
                     state = HIGH;
-                    $display("\t\t\t\t\tMeasurement finished \t\t Measured temperature: %d", temperature_output);
                 end 
             end
 
@@ -54,7 +61,7 @@ always_ff @(posedge clk) begin
                     count = count + 1;
                 end else begin
                     pulse_duration = count;
-                    $display("\t\t\t\t\tCount finished \t\t Pulse Duration: %d", pulse_duration);
+                    $display("\t\t\t\t\tCount finished \t\t Pulse Duration: %d clocks", pulse_duration);
                     state = IDLE;
                 end
             end
@@ -64,20 +71,20 @@ always_ff @(posedge clk) begin
     end
 end
 
-// Calculate the temperature value based on the raw pulse duration value
-// Convert from real to signed int and truncate to 9 bits
-always_comb begin
-    temp_value = $rtoi(GAIN3*pulse_duration*pulse_duration*pulse_duration + GAIN2*pulse_duration*pulse_duration + GAIN*pulse_duration + OFFSET);
-    temp_value1 = temp_value[8:0];
-end
+// // Calculate the temperature value based on the raw pulse duration value
+// // Convert from real to signed int and truncate to 9 bits
+// always_comb begin
+//     temp_value = $rtoi(GAIN3*pulse_duration*pulse_duration*pulse_duration + GAIN2*pulse_duration*pulse_duration + GAIN*pulse_duration + OFFSET);
+//     temp_value1 = temp_value[8:0];
+// end
 
-// Update output register
-always_ff @(posedge clk) begin
-    if (~reset_n) begin
-        temperature_output = 9'b0;
-    end else begin
-    temperature_output = temp_value1;
-    end
-end;
+// // Update output register
+// always_ff @(posedge clk) begin
+//     if (~reset_n) begin
+//         temperature_output = 9'b0;
+//     end else begin
+//     temperature_output = temp_value1;
+//     end
+// end;
 
 endmodule

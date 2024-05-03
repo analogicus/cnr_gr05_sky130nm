@@ -1,0 +1,25 @@
+
+55. Printing statistics.
+
+=== PulseDurationMeasurement ===
+
+   Number of wires:              20272
+   Number of wire bits:          20825
+   Number of public wires:          51
+   Number of public wire bits:     465
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:              20794
+     $_ANDNOT_                    7159
+     $_AND_                         75
+     $_MUX_                       1684
+     $_NAND_                       500
+     $_NOR_                       1064
+     $_NOT_                        575
+     $_ORNOT_                      905
+     $_OR_                        2829
+     $_XNOR_                      2042
+     $_XOR_                       3527
+     sky130_fd_sc_hd__dfxtp_2      434
+

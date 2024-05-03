@@ -41,7 +41,7 @@ VCLK VCLK 0 PULSE(0 1.8 0 1n 1n 12.5n 25n)
 *-----------------------------------------------------------------
 .include ../xdut.spi
 
-adut [VCLK VPWR_UP pulse] [~D8 ~D7 ~D6 ~D5 ~D4 ~D3 ~D2 ~D1 ~D0] null vdut
+adut [VCLK VPWR_UP pulse] [N] null vdut
 .model vdut d_cosim simulation="./../verilog_include_file.so" 
 
 

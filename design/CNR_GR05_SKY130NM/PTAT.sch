@@ -130,4 +130,4 @@ C {CNR_ATR_SKY130NM/CNRATR_PCH_12C1F2.sym} 370 -420 0 0 {name=x4 }
 C {CNR_ATR_SKY130NM/CNRATR_PCH_12C1F2.sym} 300 -420 0 1 {name=x6 }
 C {devices/ipin.sym} -180 -490 0 0 {name=p3 lab=Vtail}
 C {devices/opin.sym} 510 -470 0 0 {name=p4 lab=Vptat}
-C {SUN_TR_SKY130NM/SUNTR_RPPO2.sym} 450 -270 1 0 {name=x3 }
+C {SUN_TR_SKY130NM/SUNTR_RPPO4.sym} 450 -270 1 0 {name=x3 }

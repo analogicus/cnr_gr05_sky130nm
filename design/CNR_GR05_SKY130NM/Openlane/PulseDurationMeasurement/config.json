@@ -1,0 +1,10 @@
+{
+    "DESIGN_NAME": "PulseDurationMeasurement",
+    "VERILOG_FILES": "dir::src/*.v",
+    "CLOCK_PORT": "clk",
+    "CLOCK_PERIOD": 25.0,
+    "VDD_PIN_VOLTAGE": 1.8,
+    "FP_PDN_MULTILAYER": true,
+    "//": "Pin Order",
+    "FP_PIN_ORDER_CFG": "dir::pin_order.cfg"
+}

@@ -1,0 +1,19 @@
+Design Name: PulseDurationMeasurement
+Run Directory: /openlane/designs/PulseDurationMeasurement/runs/RUN_2024.04.19_11.37.55
+----------------------------------------
+
+Magic DRC Summary:
+Source: /openlane/designs/PulseDurationMeasurement/runs/RUN_2024.04.19_11.37.55/reports/signoff/drc.rpt
+Total Magic DRC violations is 0
+----------------------------------------
+
+LVS Summary:
+Source: /openlane/designs/PulseDurationMeasurement/runs/RUN_2024.04.19_11.37.55/logs/signoff/38-PulseDurationMeasurement.lef.lvs.log
+Number of nets: 19363                      |Number of nets: 19363                      
+Design is LVS clean.
+----------------------------------------
+
+Antenna Summary:
+Source: /openlane/designs/PulseDurationMeasurement/runs/RUN_2024.04.19_11.37.55/logs/signoff/41-arc.log
+Pin violations: 27
+Net violations: 19
