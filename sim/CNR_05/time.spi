@@ -3,7 +3,7 @@
 * Include
 *----------------------------------------------------------------
 #ifdef Lay
-.include ../../../work/lpe/CNR_05_lpe.spi
+.include ../../../work/lpe/final_lpe.spi
 #else
 .include ../../../work/xsch/final.spice
 #endif
@@ -69,7 +69,7 @@ set color0=white
 set color1=black
 unset askquit
 
-option temp=-40
+*option temp=-40
 optran 1 1 1 100n 2u 0
 
 

@@ -26,13 +26,11 @@ lab=VSS}
 N 610 -340 740 -340 {
 lab=Vout}
 N 610 -490 610 -450 {
-lab=VDD_1V8}
+lab=#net1}
 N 610 -580 610 -550 {
 lab=VDD_1V8}
 N 780 -250 830 -250 {
 lab=RST}
-N 610 -550 610 -490 {
-lab=VDD_1V8}
 N 510 -420 570 -420 {
 lab=Vin}
 N 640 -580 640 -420 {
@@ -47,3 +45,4 @@ C {devices/ipin.sym} 510 -420 0 0 {name=p2 lab=Vin}
 C {devices/ipin.sym} 830 -250 0 1 {name=p3 lab=RST}
 C {devices/ipin.sym} 560 -580 0 0 {name=p4 lab=VDD_1V8}
 C {devices/ipin.sym} 610 -90 0 0 {name=p5 lab=VSS}
+C {devices/vsource.sym} 610 -520 0 0 {name=Vtest3 value=0 savecurrent=false}

@@ -60,7 +60,7 @@ combine:
 	python3 plot.py show_plots multi_plots .svg
 
 single:
-	python3 plot.py show_plots single_output .svg
+	python3 plot.py show_plots single_output multi_plots .svg
 
 verilog:
 	# This command is not implemented yet, use 'ngspice vlnggen <verilog_file>' instead

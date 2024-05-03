@@ -256,22 +256,21 @@ def plot_files(files, variables, scale, dir):
 
         for file in files:
             for var in variables:
-                for file in files:
-                    dfs = cs.toDataFrames(cs.ngRawRead(file))
-                    df = dfs[0]
+                dfs = cs.toDataFrames(cs.ngRawRead(file))
+                df = dfs[0]
 
-                    value = df[var].values.tolist()
-                    temp = df[df.columns[0]].values.tolist()
+                value = df[var].values.tolist()
+                temp = df[df.columns[0]].values.tolist()
 
-                    #for x in range(len(value)):
-                    #    value[x] = value[x]*scale[var.index(value)]
+                #for x in range(len(value)):
+                #    value[x] = value[x]*scale[var.index(value)]
 
-                    rand_color = randomcolor.RandomColor()
-                    color = rand_color.generate()[0]
+                rand_color = randomcolor.RandomColor()
+                color = rand_color.generate()[0]
 
-                    dir_path = str(dir) + "/"  
-                    ax.plot(temp, value, label=str(file).replace(dir_path,"").replace(".raw","") + " " + var, color=color)
-                    #ax.legend()
+                dir_path = str(dir) + "/"  
+                ax.plot(temp, value, label=str(file).replace(dir_path,"").replace(".raw","") + " " + var, color=color)
+                ax.legend()
         if not os.path.exists("plots"):
             os.mkdir("plots")
         if(save_svg):

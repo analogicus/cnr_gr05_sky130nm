@@ -22,7 +22,7 @@ lab=VSS}
 N -510 20 -170 20 {
 lab=VSS}
 N 130 -40 200 -40 {
-lab=#net2}
+lab=ptat_Vout}
 N -190 -60 200 -60 {
 lab=VDD_1V8}
 N -190 -60 -190 -40 {
@@ -46,15 +46,15 @@ lab=VSS}
 N -560 0 -560 170 {
 lab=VSS}
 N -180 130 -120 130 {
-lab=#net3}
+lab=#net2}
 N -180 130 -180 300 {
-lab=#net3}
+lab=#net2}
 N -180 390 -160 390 {
-lab=#net4}
+lab=#net3}
 N -160 150 -160 390 {
-lab=#net4}
+lab=#net3}
 N -160 150 -120 150 {
-lab=#net4}
+lab=#net3}
 N -530 110 -530 300 {
 lab=VDD_1V8}
 N -530 300 -480 300 {
@@ -88,23 +88,23 @@ lab=#net1}
 N 520 -20 540 -20 {
 lab=#net1}
 N 530 -40 540 -40 {
-lab=#net5}
+lab=#net4}
 N 530 -230 530 -40 {
-lab=#net5}
+lab=#net4}
 N 200 20 540 20 {
 lab=VSS}
 N 540 -0 540 20 {
 lab=VSS}
 N -500 410 -480 410 {
-lab=Comp_Vout}
+lab=comp_vout}
 N -500 410 -500 500 {
-lab=Comp_Vout}
+lab=comp_vout}
 N -500 500 950 500 {
-lab=Comp_Vout}
+lab=comp_vout}
 N 950 -80 950 500 {
-lab=Comp_Vout}
+lab=comp_vout}
 N 840 -80 950 -80 {
-lab=Comp_Vout}
+lab=comp_vout}
 N -530 -40 -510 -40 {
 lab=VDD_1V8}
 N -530 -40 -530 -20 {
@@ -118,11 +118,11 @@ lab=VDD_1V8}
 N -560 -180 410 -180 {
 lab=VSS}
 N 410 -280 410 -260 {
-lab=#net5}
+lab=#net4}
 N 410 -270 530 -270 {
-lab=#net5}
+lab=#net4}
 N 530 -270 530 -230 {
-lab=#net5}
+lab=#net4}
 N 390 -320 390 -180 {
 lab=VSS}
 N -770 -180 -560 -180 {
@@ -228,3 +228,4 @@ C {SUN_TR_SKY130NM/SUNTR_RPPO2.sym} -800 -710 1 0 {name=x24 }
 C {devices/lab_pin.sym} -820 -630 0 0 {name=p39 sig_type=std_logic lab=VSS}
 C {devices/ipin.sym} 280 -680 0 0 {name=p20 lab=VCLK}
 C {devices/opin.sym} 180 60 0 0 {name=p7 lab=pulse}
+C {devices/lab_pin.sym} 160 -40 3 0 {name=p6 sig_type=std_logic lab=ptat_Vout}
